@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Google Fonts-->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!--CSS Bootstrap-->
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/numero-mascara.css">
+</head>
+
+<body>
+    <script>
+        const loggedInUser = localStorage.getItem("loggedInUser");
+    </script>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center" title="back-to-top"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <header id="header" class="header fixed-top">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+            <a href="../index.html" class="logo d-flex align-items-center">
+                <img src="../assets/img/logo-modavo-cpaas.png" alt="Logotipo da Modavo CPaaS">
+            </a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="#hero">CPaaS</a></li>
+                    <li><a class="nav-link scrollto" href="../sobre-nos.html">Sobre Nós</a></li>
+                    <li class="dropdown"><a href="#"><span>Produtos</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="twoFactor.html">Autenticação de 2 Fatores</a>
+                            <li>
+                            <li><a href="numero-mascara.html">Número Máscara</a></li>
+                            <li><a href="sms-marketing.html">SMS Marketing</a></li>
+                            <li><a href="#">Google Verified Calls</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="../Registration Form/login.html">Login</a></li>
+                    <li><a class="getstarted scrollto" href="../Registration Form/registro.html">Cadastre-se</a></li>
+                </ul>
+                <div class="loggedUser">
+                    <strong>Usuário:</strong> <span id="loggedInUser"></span>
+                </div>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <section id="numMask-header" class="numMask-header d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 d-flex flex-column justify-content-center">
+                        <h1>Número Máscara</h1>
+                        <p>Proteja identidades profissionais.</p>
+                        <p>Garanta aos seus clientes a capacidade de fazer chamadas e enviar
+                            mensagens sem expor seus números de telefone pessoais.
+                        </p>
+                        <div>
+                            <div class="text-center text-lg-start">
+                                <a href="../preços.html"
+                                    class="btn-teste-gratis-blue scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                                    <span>CONSULTE NOSSOS PLANOS</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 marketing-img">
+                        <img src="../assets/img/Numero-Mascara/numero-mascara.png" class="img-fluid animated" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ======= Número Máscara About Section ======= -->
+        <section id="numMask-about" class="numMask-about">
+
+            <div class="container">
+
+                <div class="numMask-title">
+                    <h2>O que é um Número Máscara?</h2>
+                </div>
+
+                <div class="row">
+
+                    <div class="d-flex flex-column justify-content-center">
+                        <h3>O serviço de Número Máscara, também conhecido como Mascaramento de Chamadas, é uma solução
+                            que permite ocultar seu
+                            número de telefone durante ligações ou mensagens SMS. Esse recurso garante que seu número de
+                            telefone permaneça confidencial.
+                        </h3>
+                        <h3>
+                            Isso é útil em diversos cenários, desde garantir a segurança dos agentes de uma central de
+                            atendimento, manter em sigilo o telefones dos motoristas de um serviço de transporte, ou até
+                            mesmo para personalizar chamadas de negócios de maneira eficaz.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======= Funcionamento Número Máscara Section ======= -->
+        <section id="numMask-function" class="numMask-function">
+
+            <div class="container">
+                <div class="row gx-0">
+
+                    <div class="col-lg-6 d-flex flex-column justify-content-center">
+                        <div class="content">
+                            <h2>Como funciona o Mascaramento de Número?</h2>
+
+                            <p>
+                                Aplicar uma máscara a um número significa que, quando você ligar para um cliente, seu
+                                número de telefone é substituído pelo número máscara. Quando o destinatário recebe a
+                                chamada, ele visualiza na tela o número máscara.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 d-flex align-items-center">
+                        <img src="../assets/img/Numero-Mascara/modavo-numero-mascara-como-funciona.png"
+                            class="img-fluid" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+        </section><!-- End Funcionamento Número Máscara Section -->
+
+        <!-- ======= Services Section ======= -->
+        <section id="benefits-numMask" class="benefits-numMask">
+            <div class="container">
+
+                <div class="benefitsNumMask-title">
+                    <h2>Benefícios do Número Máscara</h2>
+                </div>
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="icon-box">
+                            <h4 class="title">Privacidade e Segurança</h4>
+                            <p class="description">
+                                Garanta interações anônimas, protegendo a privacidade de ambas as partes, sem a
+                                necessidade de compartilhar números de telefone;
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="icon-box">
+                            <h4 class="title">Personalização</h4>
+                            <p class="description">
+                                Crie uma identidade virtual distinta, exibindo um número especifico para chamadas
+                                profissionais ou pessoais.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="icon-box">
+                            <h4 class="title">Automação</h4>
+                            <p class="description">
+                                com nossa API, eliminamos a necessidade de intermediários e simplificamos o processo.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="icon-box">
+                            <h4 class="title">Gestão</h4>
+                            <p class="description">
+                                mantenha um registro do histórico de chamadas para melhor gerenciamento e análise de
+                                comunicações.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Services Section -->
+
+        <!-- ======= Values Section ======= -->
+        <section id="useNumMask" class="useNumMask">
+
+            <div class="container">
+
+                <div class="useNumMask-title">
+                    <h2>Aplicações do Número Máscara</h2>
+                </div>
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-3 col-md-5">
+                        <div class="box">
+                            <img src="../assets/img/Numero-Mascara/app-transporte.png" class="img-fluid" alt="">
+                            <h3>Apps de Transporte</h3>
+                            <p>
+                                Permite que motorista e
+                                passageiro se comuniquem
+                                sem compartilhar seus
+                                números pessoais.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-5">
+                        <div class="box">
+                            <img src="../assets/img/Numero-Mascara/app-relacionamento.png" class="img-fluid" alt="">
+                            <h3>Apps de Relacionamento</h3>
+                            <p>
+                                Permite uma maneira
+                                privada e segura para
+                                usuários interagirem sem
+                                expor contatos pessoais.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-5">
+                        <div class="box">
+                            <img src="../assets/img/Numero-Mascara/e-commerce.png" class="img-fluid" alt="">
+                            <h3>E-Commerce</h3>
+                            <p>
+                                Permite que clientes
+                                entrem em contato através
+                                do aplicativo. Podem também
+                                integrar chamadas internacionais.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-5">
+                        <div class="box">
+                            <img src="../assets/img/Numero-Mascara/app-entrega.png" class="img-fluid" alt="">
+                            <h3>Entregas & Logística</h3>
+                            <p>
+                                Mantenha seu cliente
+                                informado sobre entregas
+                                e serviços, tire duvidas, etc.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- End Values Section -->
+
+    </main>
+
+    <footer id="footer" class="footer">
+
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12 text-center">
+                        <h4>Interessado em nossas Soluções?</h4>
+                        <a href="../preços.html" class="btn-contact">CONSULTE NOSSOS PLANOS.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-5 col-md-12 footer-info">
+                        <a href="../index.html" class="logo d-flex align-items-center" title="Logo-Modavo">
+                            <img src="../assets/img/logo-modavo-cpaas.png" alt="">
+                        </a>
+                        <p>Sua solução completa de CPaaS.</p>
+                        <div class="social-links mt-3">
+                            <a href="https://web.facebook.com/TelecallBr?_rdc=1&_rdr" target="_blank" class="facebook"
+                                rel="noopener" title="Visitar Facebook Telecall."><i class="bi bi-facebook"></i></a>
+                            <a href="https://www.instagram.com/telecallbr/" target="_blank" class="instagram"
+                                rel="noopener" title="Visitar Instagram Telecall"><i class="bi bi-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/telecall/" target="_blank" class="linkedin"
+                                rel="noopener" title="Visitar Linkedin Telecall"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-6 footer-links">
+                        <h4>Navegue</h4>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <a href="../index.html">CPaaS</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="../sobre-nos.html">Sobre nós</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="../index.html">Serviços</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                        <h4>Entre em Contato</h4>
+                        <p>
+                            Av. das Américas, 3434<br>
+                            Barra da Tijuca, Rio de Janeiro - RJ, 22640-102<br>
+                            Brasil<br>
+                            <strong>Telefone:</strong> (21) 3030-1010<br>
+                            <strong>Email:</strong> suporte@telecall.com<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                Copyright &copy; 2023 <strong><span>Telecall. Todos os Direitos Reservados</span></strong>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+    <script src="../assets/img/js/main.js"></script>
+
+    <script>
+        document.getElementById("loggedInUser").textContent = loggedInUser;
+    </script>
+</body>
+
+</html>

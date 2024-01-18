@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--Google Fonts-->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!--CSS Bootstrap-->
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../assets/css/style-twoFactor.css">
+
+</head>
+
+<body>
+
+    <script>
+        const loggedInUser = localStorage.getItem("loggedInUser");
+    </script>
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center" title="back to top"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <!--Header Barra Principal-->
+    <header id="header" class="header fixed-top">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+            <a href="../index.html" class="logo d-flex align-items-center">
+                <img src="../assets/img/logo-modavo-cpaas.png" alt="Logotipo da Modavo CPaaS">
+            </a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="../index.html">CPaaS</a></li>
+                    <li><a class="nav-link scrollto" href="../sobre-nos.html">Sobre Nós</a></li>
+                    <li class="dropdown"><a href="#"><span>Produtos</span> <i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="twoFactor.html">Autenticação de 2 Fatores</a>
+                            <li>
+                            <li><a href="numero-mascara.html">Número Máscara</a></li>
+                            <li><a href="sms-marketing.html">SMS Marketing</a></li>
+                            <li><a href="#">Google Verified Calls</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="../Registration Form/login.html">Login</a></li>
+                    <li><a class="getstarted scrollto" href="../Registration Form/registro.html">Cadastre-se</a></li>
+                </ul>
+                <div class="loggedUser">
+                    <strong>Usuário:</strong> <span id="loggedInUser"></span>
+                </div>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <!--Section sobre 2FA - AUTENTICAÇÃO DE DOIS FATORES-->
+        <section id="twoFactor-section" class="twoFactor-section d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 d-flex flex-column   justify-content-center">
+                        <h1>2FA - Autenticação de Dois Fatores</h1>
+                        <h2>O 2FA é um procedimento de segurança que garante que serão necessários 2 fatores únicos para
+                            liberação de uma ação.</h2>
+                        <div>
+                            <div class="text-center text-lg-start">
+                                <a href="../preços.html"
+                                    class="btn-teste-gratis-blue scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                                    <span>FAÇA UM TESTE GRÁTIS</span>
+                                    <i class="bi bi-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 hero-img">
+                        <img src="../assets/img/2FA-Images/two_factor.jpg" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Section Funcionamento 2FA-->
+        <section id="usos" class="usos">
+
+            <div class="container">
+
+                <header class="twoFA-title">
+                    <h2>Como funciona?</h2>
+                </header>
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="box">
+                            <img src="../assets/img/2FA-Images/laptop.png" class="img-fluid" alt="">
+                            <p>
+                                O usuário <strong>acessa seu site ou aplicativo</strong> e digita a senha cadastrada
+                                para entrar em seu perfil ou completar uma transação.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="box">
+                            <img src="../assets/img/2FA-Images/warning.png" class="img-fluid" alt="">
+                            <p>
+                                A Telecall recebe a tentativa de login e solicita que o usuário <strong>insira seu
+                                    número de telefone</strong> para autorizar o acesso.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="box">
+                            <img src="../assets/img/2FA-Images/smartphone-pin.png" class="img-fluid" alt="">
+                            <p>
+                                Após inserir seu número, a Telecall <strong>envia para o usuário</strong> por SMS,
+                                chamada ou e-mail um <strong>código pin</strong> de uso único.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="box">
+                            <img src="../assets/img/2FA-Images/laptop2.png" class="img-fluid" alt="">
+                            <p>
+                                O usuário <strong>insere o código</strong> no site ou aplicativo para concluir o
+                                processo de verificação.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--Final Section Funcionamento 2FA-->
+
+        <!-- ======= Benefits Two Factor Section ======= -->
+        <section id="benefits-twoFA" class="benefits-twoFA">
+
+            <div class="container">
+
+                <!-- Feature Icons -->
+                <div class="row benefits-icons">
+
+                    <div class="twoFA-title">
+                        <h2>Benefícios da Autenticação de Dois Fatores</h2>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-xl-4 text-center">
+                            <img src="../assets/img/2FA-Images/2fa-steps.png" class="img-fluid-p-4" alt="">
+                        </div>
+
+                        <div class="col-xl-8 d-flex content">
+                            <div class="row align-self-center gy-4">
+
+                                <div class="col-md-6 icon-box">
+                                    <i class="ri-line-chart-line"></i>
+                                    <div>
+                                        <h4>Segurança</h4>
+                                        <p>Ofereça <strong>segurança aprimorada</strong> para seus clientes.</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 icon-box">
+                                    <i class="ri-stack-line"></i>
+                                    <div>
+                                        <h4>Fraudes e Invasões</h4>
+                                        <p> Reduza casos de <strong>fraudes e invasões</strong> e evite o acesso a dados
+                                            por invasores.</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 icon-box">
+                                    <i class="ri-brush-4-line"></i>
+                                    <div>
+                                        <h4>Canais</h4>
+                                        <p> Envio de OTP por meio de <strong>vários canais</strong>, incluindo SMS, voz
+                                            ou e-mail.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 icon-box">
+                                    <i class="ri-magic-line"></i>
+                                    <div>
+                                        <h4>Flexibilidade</h4>
+                                        <p><strong>Flexibilidade</strong> de canais garante que o usuário conseguirá
+                                            completar a tarefa desejada
+                                            mesmo quando tiver problema com um deles.</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 icon-box">
+                                    <i class="ri-command-line"></i>
+                                    <div>
+                                        <h4>Implementação</h4>
+                                        <p>API simples e de <strong>rápida implementação</strong></p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 icon-box">
+                                    <i class="ri-radar-line"></i>
+                                    <div>
+                                        <h4>Plataforma</h4>
+                                        <p><strong>Plataforma intuitiva</strong> que permite visualizar relatórios de
+                                            uso por dia, mês ou ano e
+                                            pesquisar usando diversos critérios de filtro.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div><!-- End Feature Icons -->
+
+            </div>
+
+        </section><!-- End Benefits Two Factor Section -->
+
+        <!-- ======= Utilization Two Factor Section ======= -->
+        <section id="utilization-twoFA" class="utilization-twoFA">
+
+            <div class="container">
+
+                <div class="utilization-title">
+                    <h2>Utilizações</h2>
+                </div>
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="box">
+                            <h3>Finanças</h3>
+                            <ul>
+                                <li>Acesso ao Portal/App</li>
+                                <li>Autenticação para transações bancárias</li>
+                                <li>Pagamentos Online</li>
+                                <li>Digital Wallets</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="box">
+                            <h3>Saúde</h3>
+                            <ul>
+                                <li>Acesso ao Portal/App</li>
+                                <li>Agendamentos</li>
+                                <li>Tokens de autorização</li>
+                                <li>Telemedicina</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="box">
+                            <h3>Turismo</h3>
+                            <ul>
+                                <li>Acesso ao Portal/App</li>
+                                <li>Gestão de Reservas</li>
+                                <li>Acesso ao histórico</li>
+                                <li>Salvar dados de pagamento</li>
+                                <li>Recuperação de senha</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="box">
+                            <h3>Varejo</h3>
+                            <ul>
+                                <li>Acesso ao Portal/App</li>
+                                <li>Salvar dados de pagamentos</li>
+                                <li>Acesso ao histórico</li>
+                                <li>Recuperação de senha</li>
+                                <li>Recibo Eletrônico</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="box">
+                            <h3>Logística</h3>
+                            <ul>
+                                <li>Acesso ao Portal/App</li>
+                                <li>Salvar dados de pagamentos</li>
+                                <li>Acesso ao histórico</li>
+                                <li>Recuperação de senha</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="box">
+                            <h3>Governo</h3>
+                            <ul>
+                                <li>Acesso ao Portal/App</li>
+                                <li>Gestão de Informações</li>
+                                <li>Agendamentos</li>
+                                <li>Recuperação de senha</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section><!-- ======= End Two Factor Section ======= -->
+
+
+    </main>
+
+    <footer id="footer" class="footer">
+
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-12 text-center">
+                        <h4>Interessado em nossas Soluções?</h4>
+                        <a href="../preços.html" class="btn-contact">CONSULTE NOSSOS PLANOS.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-5 col-md-12 footer-info">
+                        <a href="../index.html" class="logo d-flex align-items-center" title="Logo-Modavo">
+                            <img src="../assets/img/logo-modavo-cpaas.png" alt="">
+                        </a>
+                        <p>Sua solução completa de CPaaS.</p>
+                        <div class="social-links mt-3">
+                            <a href="https://web.facebook.com/TelecallBr?_rdc=1&_rdr" target="_blank" class="facebook"
+                                rel="noopener" title="Visitar Facebook Telecall."><i class="bi bi-facebook"></i></a>
+                            <a href="https://www.instagram.com/telecallbr/" target="_blank" class="instagram"
+                                rel="noopener" title="Visitar Instagram Telecall"><i class="bi bi-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/telecall/" target="_blank" class="linkedin"
+                                rel="noopener" title="Visitar Linkedin Telecall"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-2 col-6 footer-links">
+                        <h4>Navegue</h4>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <a href="../index.html">CPaaS</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="../sobre-nos.html">Sobre nós</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="../index.html">Serviços</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                        <h4>Entre em Contato</h4>
+                        <p>
+                            Av. das Américas, 3434<br>
+                            Barra da Tijuca, Rio de Janeiro - RJ, 22640-102<br>
+                            Brasil<br>
+                            <strong>Telefone:</strong> (21) 3030-1010<br>
+                            <strong>Email:</strong> suporte@telecall.com<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                Copyright &copy; 2023 <strong><span>Telecall. Todos os Direitos Reservados</span></strong>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+
+    <script src="../assets/img/js/main.js"></script>
+
+    <script>
+        document.getElementById("loggedInUser").textContent = loggedInUser;
+    </script>
+</body>
+
+</html>
