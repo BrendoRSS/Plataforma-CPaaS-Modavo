@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Redireciona para a tela de login após um atraso
         setTimeout(() => {
-            window.location.href = "login.html";
+            window.location.href = "login.php";
         }, 3000);
     }
 

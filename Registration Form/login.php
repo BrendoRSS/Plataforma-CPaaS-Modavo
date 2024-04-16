@@ -45,7 +45,7 @@
 
                 <div class="login-signup">
                     <span class="text">Não tem cadastro?
-                        <a href="registro.html" class="text signup-link">Cadastre-se agora</a>
+                        <a href="registro.php" class="text signup-link">Cadastre-se agora</a>
                     </span>
                 </div>
             </div>

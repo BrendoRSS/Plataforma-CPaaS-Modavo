@@ -21,8 +21,7 @@
 
         <header>Registre-se</header>
 
-
-        <form id="registrationForm">
+        <form id="registrationForm" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <div class="form first">
                 <div class="details personal">
                     <span class="title">Dados para Cadastro</span>
@@ -55,7 +54,7 @@
 
                         <div class="input-field">
                             <label for="cpf">CPF</label>
-                            <input type="text" id="cpf" placeholder="Digite seu CPF">
+                            <input type="text" name="cpfCadastro" id="cpf" placeholder="Digite seu CPF">
                         </div>
 
                         <div class="input-field">
@@ -80,12 +79,14 @@
 
                         <div class="input-field">
                             <label for="login">Login</label>
-                            <input type="text" id="login" placeholder="Digite seu login">
+                            <input type="text" name="loginCadastro" id="login" placeholder="Digite seu login">
                         </div>
 
                         <div class="input-field">
                             <label for="password">Senha</label>
-                            <input id="password" type="password" placeholder="Digite sua senha">
+                            <input id="password" name="senhaCadastro" 
+                            oninput="<?php echo $_SERVER['PHP_SELF']; ?>"
+                            type="password" placeholder="Digite sua senha">
                         </div>
 
                         <div class="input-field">
@@ -104,6 +105,14 @@
                 </div>
             </div>
         </form>
+
+        <?php 
+        $cpfCadastro = $_POST["cpfCadastro"];
+        $loginCadastro = $_POST["loginCadastro"];
+        $senhaCadastro = $_POST[ "senhaCadastro" ];
+        echo "Deu tudo certo!!!";
+        ?>
+    
     </div>
     <script src="validacao.js"></script>
 </body>
