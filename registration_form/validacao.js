@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Obtém referência para o formulário e o contêiner de mensagens
     const form = document.getElementById("registrationForm");
     const messageContainer = document.getElementById("messageContainer");
-
+    /*
     // Adiciona um ouvinte de eventos para o envio do formulário
     form.addEventListener("submit", function (event) {
         // Impede o comportamento padrão de envio do formulário
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Chama a função para validar o formulário
         validateForm();
     });
-
+    */
     // Função para validar o formulário
     function validateForm() {
         // Obtém os valores dos campos do formulário
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Redireciona para a tela de login após um atraso
         setTimeout(() => {
-            window.location.href = "login.php";
+            window.location.href = "loginView.php";
         }, 3000);
     }
 
