@@ -21,7 +21,7 @@
 
         <header>Registre-se</header>
 
-        <form id="registrationForm" method="post" action="novoUsuarioDados.php">
+        <form id="registrationForm" method="post" action="../registration_form/dataPHP/novoUsuarioDados.php">
             <div class="form first">
                 <div class="details personal">
                     <span class="title">Dados para Cadastro</span>

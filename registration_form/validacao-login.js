@@ -55,3 +55,26 @@ function showMessage(message, type) {
         messageContainer.innerHTML = "";
     }, 3000);
 }
+
+function loginAtivo (){
+    const buttonlogin = document.querySelector('.buttonlogin')
+    const buttoncadastro = document.querySelector('.buttoncadastro')
+    const loginefetuado = document.querySelector('.loggedUser')
+    loginefetuado.style.borderRadius = '5px'     
+    loginefetuado.style.fontSize = '15px';
+    loginefetuado.style.fontfamily = 'arial';
+    loginefetuado.style.display = 'flex';
+    loginefetuado.style.alignItems = 'center';
+      
+    if(localStorage.getItem("loginativo") == null){
+  
+    }else{
+      buttonlogin.style.display = 'none'
+      buttoncadastro.style.display = 'none'
+      loginefetuado.innerHTML += `<p> Bem vindo,
+      ${localStorage.getItem("loginativo")}</p>`
+      
+    }
+    
+  }
+  

@@ -37,7 +37,7 @@
                     </div>
 
                     <div class="input-field button">
-                        <button type="submit" id="loginBtn" title="Login">
+                        <button type="submit" id="loginBtn" title="Login" onclick="loginAtivo ()">
                             <span class="btnLogin">Login</span>
                         </button>
                     </div>

@@ -1,9 +1,9 @@
 <?php
-require_once "../registroView.php";
 
-$cpfCadastro = $_POST["cpfCadastro"];
-$loginCadastro = $_POST["loginCadastro"];
-$senhaCadastro = $_POST[ "senhaCadastro" ];
+
+$cpfCadastro = INPUT_POST["cpfCadastro"];
+$loginCadastro = INPUT_POST["loginCadastro"];
+$senhaCadastro = INPUT_POST[ "senhaCadastro" ];
 
 $cli = new Usuario ($cpfCadastro, $loginCadastro, $senhaCadastro );
 
