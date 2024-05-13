@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style registro.css">
+    <link rel="stylesheet" href="../assets/css/styleregistro.css">
 
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
@@ -21,7 +21,7 @@
 
         <header>Registre-se</header>
 
-        <form id="registrationForm" method="post" action="../registration_form/dataPHP/novoUsuarioDados.php">
+        <form id="registrationForm" method="post" action="#">
             <div class="form first">
                 <div class="details personal">
                     <span class="title">Dados para Cadastro</span>
@@ -29,7 +29,7 @@
                     <div class="fields">
                         <div class="input-field">
                             <label for="fullName">Nome</label>
-                            <input type="text" id="fullName" placeholder="Digite seu nome">
+                            <input type="text" id="fullName" placeholder="Digite seu nome" autofocus>
                         </div>
 
                         <div class="input-field">
@@ -73,7 +73,27 @@
                         </div>
 
                         <div class="input-field">
-                            <label for="localization">Endereço Completo</label>
+                            <label for="localization">Cep</label>
+                            <input type="text" id="txtCEP" placeholder="Digite o seu Cep" onblur="apiBuscaCep()">
+                        </div>
+                        <div class="input-field">
+                            <label for="localization">Estado</label>
+                            <input type="text" id="txtEstado" placeholder="Estado" disabled>
+                        </div>
+                        <div class="input-field">
+                            <label for="localization">Cidade</label>
+                            <input type="text" id="txtCidade" placeholder="Cidade" disabled>
+                        </div>
+                        <div class="input-field">
+                            <label for="localization">Bairro</label>
+                            <input type="text" id="txtBairro" placeholder="Bairro" disabled>
+                        </div>
+                        <div class="input-field">
+                            <label for="localization">Rua</label>
+                            <input type="text" id="txtRua" placeholder="Rua" disabled>
+                        </div>
+                        <div class="input-field">
+                            <label for="localization">Número</label>
                             <input type="text" id="localization" placeholder="Digite o seu Endereço completo">
                         </div>
 
@@ -106,7 +126,8 @@
         </form>
     
     </div>
-    <script src="validacao.js"></script>
+    <script src="../assets/js/apiBuscaCep.js"></script>
+    <script src="../registration_form/validacao.js"></script>
 </body>
 
 </html>

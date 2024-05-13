@@ -78,10 +78,11 @@ document.addEventListener("DOMContentLoaded", function () {
             showMessage("As senhas não coincidem.", "error");
             return;
         }
-
+        /* Não estamos utilizando o LocalStorage
         // Se todas as validações passarem, armazena as informações de login e redireciona para a tela de login
         localStorage.setItem("userLogin", login);
         localStorage.setItem("userPassword", password);
+        */
 
         // Mostra mensagem de sucesso
         showMessage("Cadastro realizado com sucesso!", "success");

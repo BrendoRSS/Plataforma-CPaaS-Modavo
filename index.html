@@ -59,17 +59,44 @@
                 <li><a href="registration_form/Autenticação2FAview.php">Google Verified Calls</a></li>
               </ul>
             </li>
-            <li class="buttonlogin"><a class="nav-link scrollto"  href="registration_form/loginView.php">Login</a></li>
-            <li class="buttoncadastro"><a class="getstarted scrollto"  href="registration_form/registroView.php">Cadastre-se</a></li>
-            <div class="loggedUser">
-              <span id="loggedInUser"></span>
+            <div id="botoesAcesso" style="display:flex">
+              <a class="nav-link scrollto" href="registration_form/loginView.html">Login</a></li>
+              <a class="getstarted scrollto"
+                href="registration_form/registroView.html">Cadastre-se</a></li>
             </div>
+            <div id="sectionAtiva" style="display:flex">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="bi bi-person-circle"> [Brendo Silva]</i>
+
+                      </a>
+                      <ul class="dropdown-menu">
+                        <br>
+                        <li style="display: flex; justify-content: center;"><i class="bi bi-person-circle d-flex"></i>
+                        </li>
+                          <li><a class="dropdown-item" href="#">Menu</a></li>
+                          <li><a class="dropdown-item" href="#">Editar usuário</a></li>
+                          <li><a class="dropdown-item" href="#">Consulta de
+                            Usuário [Master]</a></li>
+                          <li><a class="dropdown-item" href="#">Modelo do BD</a></li>
+                            
+                          <li>
+                              <hr class="dropdown-divider">
+                          </li>
+                          <li style="display: flex; justify-content: center;">
+                            <form action="#" method="post"><input class="btn btn-danger" type="button" name="sair" id="sair" onclick="sairUsuario()" value="Sair"></form></li>
+                      </ul>
+                  </li>
+              </ul>
+          </div>
           </ul>
-          
+
           <i class="bi bi-list mobile-nav-toggle"></i>
+
         </nav><!-- .navbar -->
       </div>
-      <img src="../CPaaS Modavo/assets/img/Icons/lua.png" width="40px" id="iconetrocarcor"onclick="mododark(this)" > 
+      <img src="../CPaaS Modavo/assets/img/Icons/lua.png" width="40px" id="iconetrocarcor" onclick="mododark(this)">
     </div>
   </header><!-- End Header -->
 
@@ -188,7 +215,7 @@
 
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
             <div class="box">
-              <img src="assets/img/conexão.png" class="img-fluid" alt="">
+              <img src="assets/img/conexao.png" class="img-fluid" alt="">
               <h3>Experiência do Usuário (UX)</h3>
               <p>
                 Marcas que estão em <strong>múltiplos canais</strong> melhoram a experiência do usuário
@@ -221,7 +248,8 @@
               <h3>Autenticação de Dois Fatores</h3>
               <p>Fortaleça a estratégia de segurança do seu negócio com autenticação de dois fatores
                 avançada.</p>
-              <a href="Produtos/twoFactor.html" class="read-more"><span>Saiba Mais</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="Produtos/twoFactor.html" class="read-more"><span>Saiba Mais</span> <i
+                  class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
@@ -230,7 +258,8 @@
               <img src="assets/img/services/message-2-line.png" class="ri-message-2-line icon" title="message">
               <h3>SMS Marketing</h3>
               <p>Impulsione suas campanhas com nosso serviço de envio de SMS em massa.</p>
-              <a href="Produtos/sms-marketing.html" class="read-more"><span>Saiba Mais</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="Produtos/sms-marketing.html" class="read-more"><span>Saiba Mais</span> <i
+                  class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
@@ -251,7 +280,8 @@
               <p>Capacidade de fazer chamadas e enviar mensagens sem expor seus números de telefone
                 pessoais.
               </p>
-              <a href="Produtos/numero-mascara.html" class="read-more"><span>Saiba Mais</span> <i class="bi bi-arrow-right"></i></a>
+              <a href="Produtos/numero-mascara.html" class="read-more"><span>Saiba Mais</span> <i
+                  class="bi bi-arrow-right"></i></a>
             </div>
           </div>
 
@@ -396,7 +426,9 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <!-- Sair do Usuario-->
+  <script src="assets/js/sairUsuario.js"></script>
+  <!--Fim Sair do Usuario -->
   <script>
     // Recupere o usuário logado do armazenamento local
     const loggedInUser = localStorage.getItem("loggedInUser");
@@ -404,8 +436,7 @@
     // Exiba o usuário logado na página
     document.getElementById("loggedInUser").textContent = loggedInUser;
 
-</script>
-  
+  </script>
 
 </body>
 
