@@ -32,7 +32,6 @@
 </head>
 
 <body>
-
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center" title="Voltar ao Topo da Página."><i
       class="bi bi-arrow-up-short"></i></a>
 
@@ -79,7 +78,7 @@
                         <li style="display: flex; justify-content: center;">Olá, [Brendo]</li>
                         <br>
                           <li><a class="dropdown-item" href="#"><i class="bi bi-gear-fill"> Editar usuário</i></a></li>
-                          <li><a class="dropdown-item" href="#"><i class="bi bi-search"> Consultar
+                          <li><a class="dropdown-item" href="crud/consulta.php"><i class="bi bi-search"> Consultar
                             usuários [Master]</i></a></li>
                           <li><a class="dropdown-item" href="#"><i class="bi bi-aspect-ratio-fill"> MER</i></a></li>
                             
@@ -432,15 +431,7 @@
   <!-- Sair do Usuario-->
   <script src="assets/js/sairUsuario.js"></script>
   <!--Fim Sair do Usuario -->
-  <script>
-    // Recupere o usuário logado do armazenamento local
-    const loggedInUser = localStorage.getItem("loggedInUser");
-
-    // Exiba o usuário logado na página
-    document.getElementById("loggedInUser").textContent = loggedInUser;
-
-  </script>
-
+  <script src="teste.js"></script>
 </body>
 
 </html>
