@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Número Mascara</title>
     <!--Google Fonts-->
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
 
     <!--CSS Bootstrap-->
-    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="./../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="./../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="./../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="./../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="./../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="../assets/css/numero-mascara.css">
+    <link rel="stylesheet" href="./../assets/css/numero-mascara.css">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+      <script>
+         $(function () {
+            $("#header1").load("header.php");
+            $("#footer1").load("footer.php");
+         });
+  </script>
 </head>
 
 <body>
@@ -29,36 +36,7 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center" title="back-to-top"><i
             class="bi bi-arrow-up-short"></i></a>
 
-    <header id="header" class="header fixed-top">
-        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
-            <a href="../index.html" class="logo d-flex align-items-center">
-                <img src="../assets/img/logo-modavo-cpaas.png" alt="Logotipo da Modavo CPaaS">
-            </a>
-
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a class="nav-link scrollto" href="#hero">CPaaS</a></li>
-                    <li><a class="nav-link scrollto" href="../sobre-nos.html">Sobre Nós</a></li>
-                    <li class="dropdown"><a href="#"><span>Produtos</span> <i class="bi bi-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="twoFactor.html">Autenticação de 2 Fatores</a>
-                            <li>
-                            <li><a href="numero-mascara.html">Número Máscara</a></li>
-                            <li><a href="sms-marketing.html">SMS Marketing</a></li>
-                            <li><a href="#">Google Verified Calls</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="nav-link scrollto" href="../Registration Form/loginView.php">Login</a></li>
-                    <li><a class="getstarted scrollto" href="../Registration Form/registroView.php">Cadastre-se</a></li>
-                </ul>
-                <div class="loggedUser">
-                    <strong>Usuário:</strong> <span id="loggedInUser"></span>
-                </div>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav>
-        </div>
-    </header>
+    <header id="header1"></header>
 
     <main id="main">
 
@@ -73,7 +51,7 @@
                         </p>
                         <div>
                             <div class="text-center text-lg-start">
-                                <a href="../preços.html"
+                                <a href="precos.php"
                                     class="btn-teste-gratis-blue scrollto d-inline-flex align-items-center justify-content-center align-self-center">
                                     <span>CONSULTE NOSSOS PLANOS</span>
                                     <i class="bi bi-arrow-right"></i>
@@ -268,76 +246,18 @@
 
     </main>
 
-    <footer id="footer" class="footer">
-
-        <div class="footer-newsletter">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-12 text-center">
-                        <h4>Interessado em nossas Soluções?</h4>
-                        <a href="../preços.html" class="btn-contact">CONSULTE NOSSOS PLANOS.</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-top">
-            <div class="container">
-                <div class="row gy-4">
-                    <div class="col-lg-5 col-md-12 footer-info">
-                        <a href="../index.html" class="logo d-flex align-items-center" title="Logo-Modavo">
-                            <img src="../assets/img/logo-modavo-cpaas.png" alt="">
-                        </a>
-                        <p>Sua solução completa de CPaaS.</p>
-                        <div class="social-links mt-3">
-                            <a href="https://web.facebook.com/TelecallBr?_rdc=1&_rdr" target="_blank" class="facebook"
-                                rel="noopener" title="Visitar Facebook Telecall."><i class="bi bi-facebook"></i></a>
-                            <a href="https://www.instagram.com/telecallbr/" target="_blank" class="instagram"
-                                rel="noopener" title="Visitar Instagram Telecall"><i class="bi bi-instagram"></i></a>
-                            <a href="https://www.linkedin.com/company/telecall/" target="_blank" class="linkedin"
-                                rel="noopener" title="Visitar Linkedin Telecall"><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-2 col-6 footer-links">
-                        <h4>Navegue</h4>
-                        <ul>
-                            <li><i class="bi bi-chevron-right"></i> <a href="../index.html">CPaaS</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="../sobre-nos.html">Sobre nós</a></li>
-                            <li><i class="bi bi-chevron-right"></i> <a href="../index.html">Serviços</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                        <h4>Entre em Contato</h4>
-                        <p>
-                            Av. das Américas, 3434<br>
-                            Barra da Tijuca, Rio de Janeiro - RJ, 22640-102<br>
-                            Brasil<br>
-                            <strong>Telefone:</strong> (21) 3030-1010<br>
-                            <strong>Email:</strong> suporte@telecall.com<br>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="copyright">
-                Copyright &copy; 2023 <strong><span>Telecall. Todos os Direitos Reservados</span></strong>
-            </div>
-        </div>
+    <footer id="footer1">
     </footer>
 
-    <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="../assets/vendor/aos/aos.js"></script>
-    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="../assets/vendor/php-email-form/validate.js"></script>
+    <script src="./../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="./../assets/vendor/aos/aos.js"></script>
+    <script src="./../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="./../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="./../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="./../assets/vendor/php-email-form/validate.js"></script>
 
-    <script src="../assets/img/js/main.js"></script>
+    <script src="./../assets/img/js/main.js"></script>
 
     <script>
         document.getElementById("loggedInUser").textContent = loggedInUser;

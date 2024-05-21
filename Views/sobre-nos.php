@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../Cpaas%20Modavo/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link
@@ -19,15 +19,22 @@
         rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link href="assets/css/sobre-nos.css" rel="stylesheet">
+    <link href="../assets/css/sobre-nos.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+      <script>
+         $(function () {
+            $("#header1").load("header.php");
+            $("#footer1").load("footer.php");
+         });
+    </script>
 
 </head>
 
@@ -37,39 +44,7 @@
         title="Voltar ao Topo da Página."><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- ======= Header ======= -->
-    <header id="header" class="header fixed-top">
-
-        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
-            <a href="index.html" class="logo d-flex align-items-center">
-                <img src="assets/img/logo-modavo-cpaas.png" alt="Logotipo da Modavo CPaaS">
-            </a>
-
-            <div id="menuContainer">
-                <nav id="navbar" class="navbar">
-                    <ul>
-                        <li><a class="nav-link scrollto active" href="#hero">CPaaS</a></li>
-                        <li><a class="nav-link scrollto" href="#">Sobre Nós</a></li>
-                        <li class="dropdown"><a href="#"><span>Produtos</span> <i class="bi bi-chevron-down"></i></a>
-                            <ul>
-                                <li><a href="Produtos/twoFactor.html">Autenticação de 2 Fatores</a>
-                                <li>
-                                <li><a href="Produtos/numero-mascara.html">Número Máscara</a></li>
-                                <li><a href="Produtos/sms-marketing.html">SMS Marketing</a></li>
-                                <li><a href="#">Google Verified Calls</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="nav-link scrollto" href="registration_form/loginView.php">Login</a></li>
-                        <li><a class="getstarted scrollto" href="registration_form/registroView.php">Cadastre-se</a></li>
-                    </ul>
-                    <div class="loggedUser">
-                        <strong>Usuário:</strong><span id="loggedInUser"></span>
-                    </div>
-                    <i class="bi bi-list mobile-nav-toggle"></i>
-                </nav><!-- .navbar -->
-            </div>
-
-        </div>
+    <header id="header1">
     </header><!-- End Header -->
 
     <main id="main">
@@ -227,15 +202,15 @@
     </footer>
 
     <!-- Vendor JS Files -->
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
 
     <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <script src="../assets/js/main.js"></script>
 
     <script>
         // Recupere o usuário logado do armazenamento local

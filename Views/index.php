@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="./../assets/img/favicon.png" rel="icon">
+  <link href="./../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link
@@ -19,96 +19,38 @@
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="./../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="./../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="./../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="./../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="./../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="./../assets/css/style.css" rel="stylesheet">
 
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+      <script>
+         $(function () {
+            $("#header1").load("header.php");
+            $("#footer1").load("footer.php");
+         });
+  </script>
 </head>
 
 <body>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center" title="Voltar ao Topo da Página."><i
       class="bi bi-arrow-up-short"></i></a>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top">
-
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo-modavo-cpaas.png" alt="Logotipo da Modavo CPaaS">
-      </a>
-
-      <div id="menuContainer">
-        <nav id="navbar" class="navbar">
-          <ul>
-            <li><a class="nav-link scrollto active" href="#hero">CPaaS</a></li>
-            <li><a class="nav-link scrollto" href="sobre-nos.html">Sobre Nós</a></li>
-            <li class="dropdown"><a href="#"><span>Produtos</span> <i class="bi bi-chevron-down"></i></a>
-              <ul>
-                <li><a href="Produtos/twoFactor.html">Autenticação de 2 Fatores</a>
-                <li>
-                <li><a href="Produtos/numero-mascara.html">Número Máscara</a></li>
-                <li><a href="Produtos/sms-marketing.html">SMS Marketing</a></li>
-                <li><a href="registration_form/Autenticação2FAview.php">Google Verified Calls</a></li>
-              </ul>
-            </li>
-            <div id="botoesAcesso" style="display:flex">
-              <a class="nav-link scrollto" href="registration_form/loginView.html">Login</a></li>
-              <a class="getstarted scrollto"
-                href="registration_form/registroView.html">Cadastre-se</a></li>
-            </div>
-            <div id="sectionAtiva" style="display:flex">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          <i class="bi bi-person-circle"> [Brendo Silva]</i>
-
-                      </a>
-                      <ul class="dropdown-menu">
-                        <br>
-                        <li style="display: flex; justify-content: center;"><i class="bi bi-person-circle d-flex"></i>
-                        </li>
-                        <br>
-                        <li style="display: flex; justify-content: center;">Olá, [Brendo]</li>
-                        <br>
-                          <li><a class="dropdown-item" href="#"><i class="bi bi-gear-fill"> Editar usuário</i></a></li>
-                          <li><a class="dropdown-item" href="crud/consulta.php"><i class="bi bi-search"> Consultar
-                            usuários [Master]</i></a></li>
-                          <li><a class="dropdown-item" href="#"><i class="bi bi-aspect-ratio-fill"> MER</i></a></li>
-                            
-                          <li>
-                              <hr class="dropdown-divider">
-                          </li>
-                          <li style="display: flex; justify-content: center;">
-                            <input class="btn btn-danger" type="button" name="sair" id="sair" onclick="sairUsuario()" value="Sair">
-                          </li>
-                      </ul>
-                  </li>
-              </ul>
-          </div>
-          </ul>
-
-          <i class="bi bi-list mobile-nav-toggle"></i>
-
-        </nav><!-- .navbar -->
-      </div>
-      <img src="../CPaaS Modavo/assets/img/Icons/lua.png" width="40px" id="iconetrocarcor" onclick="mododark(this)">
-    </div>
-  </header><!-- End Header -->
+  <header id="header1"></header>
+  
 
   <!-- ======= Seção sobre o CPaaS ======= -->
   <section id="cpaas-section" class="cpaas-section d-flex align-items-center">
-
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center modavo-logo">
-          <img src="assets/img/logo-modavo-cpaas.png" alt="" width="300">
+          <img src="./../assets/img/logo-modavo-cpaas.png" alt="" width="300">
           <h2 data-aos="fade-up" data-aos-delay="400">
             Descubra a solução de CPaaS da Modavo. Uma solução completa para integrar canais de comunicação
             empresarial, como SMS, autenticação de dois fatores, números máscara, transcrição de áudio e
@@ -125,7 +67,7 @@
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/modavo-solucoes-cpaas.png" class="img-fluid animated" alt="">
+          <img src="./../assets/img/modavo-solucoes-cpaas.png" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
@@ -169,7 +111,7 @@
           </div>
 
           <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
-            <img src="assets/img/cpaas-plataforma.png" class="img-fluid" alt="">
+            <img src="./../assets/img/cpaas-plataforma.png" class="img-fluid" alt="">
           </div>
 
         </div>
@@ -196,7 +138,7 @@
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="box">
-              <img src="assets/img/values-2.png" class="img-fluid" alt="">
+              <img src="./../assets/img/values-2.png" class="img-fluid" alt="">
               <h3>Crescimento</h3>
               <p>
                 Expectativa de crescimento estimado de <strong>$ 8,2 bilhões</strong> em 2021.
@@ -206,7 +148,7 @@
 
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
             <div class="box">
-              <img src="assets/img/values-1.png" class="img-fluid" alt="">
+              <img src="./../assets/img/values-1.png" class="img-fluid" alt="">
               <h3>Conectividade</h3>
               <p>
                 <strong>85%</strong> dos profissionais se conectam de maneira diferente com colegas e
@@ -217,7 +159,7 @@
 
           <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
             <div class="box">
-              <img src="assets/img/conexao.png" class="img-fluid" alt="">
+              <img src="./../assets/img/conexao.png" class="img-fluid" alt="">
               <h3>Experiência do Usuário (UX)</h3>
               <p>
                 Marcas que estão em <strong>múltiplos canais</strong> melhoram a experiência do usuário
@@ -246,7 +188,7 @@
 
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-box blue">
-              <img src="assets/img/services/lock-line.png" class="ri-lock-line icon" title="lock-line">
+              <img src="./../assets/img/services/lock-line.png" class="ri-lock-line icon" title="lock-line">
               <h3>Autenticação de Dois Fatores</h3>
               <p>Fortaleça a estratégia de segurança do seu negócio com autenticação de dois fatores
                 avançada.</p>
@@ -257,7 +199,7 @@
 
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-box blue">
-              <img src="assets/img/services/message-2-line.png" class="ri-message-2-line icon" title="message">
+              <img src="./../assets/img/services/message-2-line.png" class="ri-message-2-line icon" title="message">
               <h3>SMS Marketing</h3>
               <p>Impulsione suas campanhas com nosso serviço de envio de SMS em massa.</p>
               <a href="Produtos/sms-marketing.html" class="read-more"><span>Saiba Mais</span> <i
@@ -267,7 +209,7 @@
 
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="service-box blue">
-              <img src="assets/img/services/search-line.png" class="ri-search-line icon" title="search-line">
+              <img src="./../assets/img/services/search-line.png" class="ri-search-line icon" title="search-line">
               <h3>Google Verified Calls</h3>
               <p>Obtenha informações sobre um número de telefone celular de maneira fácil e rápida</p>
               <a href="#" class="read-more"><span>Saiba Mais</span> <i class="bi bi-arrow-right"></i></a>
@@ -276,13 +218,13 @@
 
           <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
             <div class="service-box blue-light">
-              <img src="assets/img/services/chat-private-line.png" class="ri-chat-private-line icon"
+              <img src="./../assets/img/services/chat-private-line.png" class="ri-chat-private-line icon"
                 title="chat-private">
               <h3>Número Máscara</h3>
               <p>Capacidade de fazer chamadas e enviar mensagens sem expor seus números de telefone
                 pessoais.
               </p>
-              <a href="Produtos/numero-mascara.html" class="read-more"><span>Saiba Mais</span> <i
+              <a href="Produtos/numero-mascara.php" class="read-more"><span>Saiba Mais</span> <i
                   class="bi bi-arrow-right"></i></a>
             </div>
           </div>
@@ -307,7 +249,7 @@
 
           <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
             <div class="use-box logistica">
-              <img src="assets/img/Uses/truck-line.png" class="ri-truck-line icon" title="truck-line">
+              <img src="./../assets/img/Uses/truck-line.png" class="ri-truck-line icon" title="truck-line">
               <h3>Logística</h3>
               <p>Acesso seguro com 2FA.</p>
               <p>Uso de números mascarados para proteção de funcionário e cliente.</p>
@@ -317,7 +259,7 @@
 
           <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
             <div class="use-box varejo">
-              <img src="assets/img/Uses/shopping-cart-2-line.png" class="ri-shopping-cart-2-line icon"
+              <img src="./../assets/img/Uses/shopping-cart-2-line.png" class="ri-shopping-cart-2-line icon"
                 title="shopping-cart">
               <h3>Varejo</h3>
               <p>Compra Segura com 2</p>
@@ -328,7 +270,7 @@
 
           <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
             <div class="use-box callCenter">
-              <img src="assets/img/Uses/customer-service-2-line.png" class="ri-customer-service-2-line icon"
+              <img src="./../assets/img/Uses/customer-service-2-line.png" class="ri-customer-service-2-line icon"
                 title="customer-service">
               <h3>Call Center</h3>
               <p>Melhore taxas de abertura utilizando alertas SMS para confirmações.</p>
@@ -339,7 +281,7 @@
 
           <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
             <div class="use-box saude">
-              <img src="assets/img/Uses/heart-pulse-line.png" class="ri-heart-pulse-line icon" title="heart-pulse">
+              <img src="./../assets/img/Uses/heart-pulse-line.png" class="ri-heart-pulse-line icon" title="heart-pulse">
               <h3>Saúde</h3>
               <p>Acesso seguro com 2FA.</p>
               <p>Melhore o agendamento e reduza faltas com lembretes por SMS.</p>
@@ -355,83 +297,23 @@
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-12 text-center">
-            <h4>Interessado em nossas Soluções?</h4>
-            <a href="preços.html" class="btn-contact">CONSULTE NOSSOS PLANOS.</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-5 col-md-12 footer-info">
-            <a href="index.html" class="logo d-flex align-items-center" title="logo-modavo">
-              <img src="assets/img/logo-modavo-cpaas.png" alt="">
-            </a>
-            <p>Sua solução completa de CPaaS.</p>
-            <div class="social-links mt-3">
-              <a href="https://web.facebook.com/TelecallBr?_rdc=1&_rdr" target="_blank" class="facebook" rel="noopener"
-                title="Visitar Facebook Telecall."><i class="bi bi-facebook"></i></a>
-              <a href="https://www.instagram.com/telecallbr/" target="_blank" class="instagram" rel="noopener"
-                title="Visitar Instagram Telecall"><i class="bi bi-instagram"></i></a>
-              <a href="https://www.linkedin.com/company/telecall/" target="_blank" class="linkedin" rel="noopener"
-                title="Visitar Linkedin Telecall"><i class="bi bi-linkedin"></i></a>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Navegue</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="index.html">CPaaS</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="sobre-nos.html">Sobre nós</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="index.html">Serviços</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-            <h4>Entre em Contato</h4>
-            <p>
-              Av. das Américas, 3434<br>
-              Barra da Tijuca, Rio de Janeiro - RJ, 22640-102<br>
-              Brasil<br>
-              <strong>Telefone:</strong> (21) 3030-1010<br>
-              <strong>Email:</strong> suporte@telecall.com<br>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copyright">
-        Copyright &copy; 2023 <strong><span>Telecall. Todos os Direitos Reservados</span></strong>
-      </div>
-    </div>
-  </footer>
+  <footer id="footer1"></footer>
+  
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="./../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="./../assets/vendor/aos/aos.js"></script>
+  <script src="./../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="./../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="./../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="./../assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="./../assets/js/main.js"></script>
   <!-- Sair do Usuario-->
   <script src="assets/js/sairUsuario.js"></script>
   <!--Fim Sair do Usuario -->
-  <script src="teste.js"></script>
 </body>
 
 </html>

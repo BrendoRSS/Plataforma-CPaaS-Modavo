@@ -10,13 +10,13 @@
 
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-    <title>Conheça a Modavo: Sua solução completa de CPaaS</title>
+    <title>Cadastro</title>
 </head>
 
 <body>
     <div class="container" id="container">
         <div class="form-image">
-            <img src="logo-modavo-cpaas.png" alt="Form Image">
+            <img src="./../assets/img/logo-modavo-cpaas.png" alt="Form Image">
         </div>
 
         <header>Registre-se</header>
@@ -126,8 +126,8 @@
         </form>
     
     </div>
-    <script src="../assets/js/apiBuscaCep.js"></script>
-    <script src="../registration_form/validacao.js"></script>
+    <script src="./../assets/js/apiBuscaCep.js"></script>
+    <script src="./../registration_form/validacao.js"></script>
 </body>
 
 </html>

@@ -10,53 +10,48 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
     <!-- ===== CSS ===== -->
-    <link rel="stylesheet" href="style login.css">
+    <link rel="stylesheet" href="./../assets/css/stylelogin.css">
          
     <title>Login & Registration Form</title> 
+
 </head>
 <body>
     
     <div class="container">
         <div class="form-image">
-            <img src="logo-modavo-cpaas.png" id="image" alt="Form Image">
+            <img src="./../assets/img/logo-modavo-cpaas.png" id="image" alt="Form Image">
         </div>
+
         <div class="forms">
             <div class="form login">
                 <span class="title">Login</span>
 
                 <form action="#">
                     <div class="input-field">
-                        <input type="text" placeholder="Digite o seu login" required>
-                        <i class="uil uil-user"></i>
+                        <input type="text" placeholder="Digite o seu login" >
+                        <img src="./../assets/img/Login/user-3-line.png" alt="">
                     </div>
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Digite sua senha" required>
-                        <i class="uil uil-lock icon"></i>
-                        <i class="uil uil-eye-slash showHidePw"></i>
-                    </div>
-
-                    <div class="checkbox-text">
-                        <div class="checkbox-content">
-                            <input type="checkbox" id="logCheck">
-                            <label for="logCheck" class="text">Lembrar-me</label>
-                        </div>
-                        
-                        <a href="#" class="text">Esqueceu a senha?</a>
+                        <input type="password" class="password" placeholder="Digite sua senha">
+                        <img src="./../assets/img/Login/lock-password-line.png" alt="">
                     </div>
 
                     <div class="input-field button">
-                        <input type="button" value="Login">
+                        <button type="submit" id="loginBtn" title="Login" onclick="loginAtivo ()">
+                            <span class="btnLogin">Login</span>
+                        </button>
                     </div>
                 </form>
 
                 <div class="login-signup">
                     <span class="text">Não tem cadastro?
-                        <a href="Registration Form/registro.php" class="text signup-link">Cadatre-se agora</a>
+                        <a href="registroView.php" class="text signup-link">Cadastre-se agora</a>
                     </span>
                 </div>
             </div>
         </div>
     </div>
-
+    <div id="message-container" class="message-container"></div>
+    <script src="./../assets/js/validacao-login.js"></script>
 </body>
 </html>
