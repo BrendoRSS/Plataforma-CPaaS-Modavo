@@ -6,7 +6,20 @@
 --------------------------------------------------------------*/
 :root {
   scroll-behavior: smooth;
+  --color-primary: #0E1D34;
+  --color-secondary: #00B7F1;
+  --color-default: #0E1D34;
+  --bgcolor-default: white;
 }
+
+.escuro {
+  --color-primary: #00B7F1;
+  --color-secondary: #0e1d34;
+  --color-default: white;
+  --bgcolor-default: #121616;
+}
+
+/*==== Confuguração do botão de acessibilidade ====*/
 
 body {
   font-family: "Open Sans", sans-serif;

@@ -6,14 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../assets/css/styleregistro.css">
+    <link rel="stylesheet" href="./../assets/css/styleregistro.css">
 
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-    <title>Cadastro</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <title>Cadastro Modavo</title>
 </head>
 
-<body>
+<body class="body">
     <div class="container" id="container">
         <div class="form-image">
             <img src="./../assets/img/logo-modavo-cpaas.png" alt="Form Image">
@@ -21,7 +24,7 @@
 
         <header>Registre-se</header>
 
-        <form id="registrationForm" method="post" action="../registration_form/validacao/novoUsuarioDados.php">
+        <form id="registrationForm" method="post" OnSubmit="javascript:validateForm();">
             <div class="form first">
                 <div class="details personal">
                     <span class="title">Dados para Cadastro</span>
@@ -104,30 +107,39 @@
 
                         <div class="input-field">
                             <label for="password">Senha</label>
-                            <input id="password" name="senha" 
-                            type="password" placeholder="Digite sua senha">
+                            <input id="password" name="senha" type="password" placeholder="Digite sua senha">
                         </div>
 
                         <div class="input-field">
                             <label for="confirmPassword">Confirme sua Senha</label>
                             <input id="confirmPassword" type="password" placeholder="Digite sua senha novamente">
                         </div>
-
                         <div class="input-field">
-                            <button class="nextBtn" type="submit" onclick="validateForm()">
-                                <span class="btnText">Cadastrar</span>
-                            </button>
-                        </div>
 
-                        <div id="messageContainer"></div>
+                        </div>
                     </div>
+
+                </div>
+                
+                <br>
+                <div class="row">
+                    <div class="col-12-md-12" style="display:flex; justify-content:right;">
+                        
+                        <button type="submit" class="btn btn-primary"style="margin-right:5px;">
+                            <span class="btnText">Cadastrar</span>
+                        </button>
+                        <button class="btn btn-secundary" style="background:#aaa" type="button" onclick="LimparCampos()"><span class="btnText" >Limpar</span></button>
+                    </div>
+                </div>
+                <div class="col-12-md-12">
+                    <div id="messageContainer" class="messageContainer" style="display:flex;justify-content:center;"></div>
                 </div>
             </div>
         </form>
-    
+
     </div>
     <script src="./../assets/js/apiBuscaCep.js"></script>
-    <script src="./../registration_form/validacao.js"></script>
+    <script src="./../assets/js/validacao-cadastro.js"></script>
 </body>
 
 </html>

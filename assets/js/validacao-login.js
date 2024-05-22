@@ -2,28 +2,37 @@
 const storedLogin = localStorage.getItem("userLogin");
 const storedPassword = localStorage.getItem("userPassword");
 
+form.addEventListener("submit", async (e) => {
+    // Impede o comportamento padrão de envio do formulário
+    e.preventDefault();
+    loginAtivo()
+});
+
 // Realizar o login
 function login(username, password) {
     if (username === storedLogin && password === storedPassword) {
         localStorage.setItem("loggedInUser", username);
 
         showMessage("Login realizado com sucesso!", "success");
-        setTimeout(() => redirectToMainPage(), 3000); // Remova o argumento 'username' aqui
+
+        setTimeout(window.location.replace("index.php"), 3000); // Remova o argumento 'username' aqui
     } else {
         showMessage("Usuário ou senha inválidos.", "error");
     }
 }
 
+/*
 // Redirecionar para a página principal
 function redirectToMainPage() {
 
     const loggedInUser = localStorage.getItem("loggedInUser");
 
         // Nome do usuário à URL como parâmetro de consulta
-    const url = `../index.html?user=${encodeURIComponent(loggedInUser)}`;
+    const url = `../index.php?user=${encodeURIComponent(loggedInUser)}`;
     window.location.href = url;
 
 }
+*/
 
 // Evento Ouvinte Botão de Login
 document.getElementById('loginBtn').addEventListener('click', function (event) {
@@ -56,25 +65,4 @@ function showMessage(message, type) {
     }, 3000);
 }
 
-function loginAtivo (){
-    const buttonlogin = document.querySelector('.buttonlogin')
-    const buttoncadastro = document.querySelector('.buttoncadastro')
-    const loginefetuado = document.querySelector('.loggedUser')
-    loginefetuado.style.borderRadius = '5px'     
-    loginefetuado.style.fontSize = '15px';
-    loginefetuado.style.fontfamily = 'arial';
-    loginefetuado.style.display = 'flex';
-    loginefetuado.style.alignItems = 'center';
-      
-    if(localStorage.getItem("loginativo") == null){
-  
-    }else{
-      buttonlogin.style.display = 'none'
-      buttoncadastro.style.display = 'none'
-      loginefetuado.innerHTML += `<p> Bem vindo,
-      ${localStorage.getItem("loginativo")}</p>`
-      
-    }
-    
-  }
   

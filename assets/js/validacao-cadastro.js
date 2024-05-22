@@ -1,20 +1,16 @@
-// Aguarda o carregamento completo do documento HTML
-document.addEventListener("DOMContentLoaded", function () {
     // Obtém referência para o formulário e o contêiner de mensagens
     const form = document.getElementById("registrationForm");
     const messageContainer = document.getElementById("messageContainer");
-   
+    
     // Adiciona um ouvinte de eventos para o envio do formulário
-    form.addEventListener("submit", function (event) {
+    form.addEventListener("submit", async (e) => {
         // Impede o comportamento padrão de envio do formulário
-        event.preventDefault();
-        // Chama a função para validar o formulário
-        validateForm();
+        e.preventDefault();
+        validateForm()
     });
     
     // Função para validar o formulário
     function validateForm() {
-        // Obtém os valores dos campos do formulário
         const fullName = document.getElementById("fullName").value;
         const dateOfBirth = document.getElementById("date-of-birth").value;
         const gender = document.getElementById("gender").value;
@@ -26,12 +22,18 @@ document.addEventListener("DOMContentLoaded", function () {
         const login = document.getElementById("login").value;
         const password = document.getElementById("password").value;
         const confirmPassword = document.getElementById("confirmPassword").value;
-
+        // Obtém os valores dos campos do formulário
         // Verifica se todos os campos obrigatórios estão preenchidos
         const requiredFields = [fullName, dateOfBirth, gender, motherName, cpf, numberMobile, phone, localization, login, password, confirmPassword];
+
         if (requiredFields.some(field => field.trim() === "")) {
             // Mostra uma mensagem de erro se algum campo estiver vazio
-            showMessage("Preencha todos os campos obrigatórios.", "error");
+            showMessage("Preencha todos os campos obrigatórios!", "error");
+            return;
+        }
+
+        if (ValidaCpf(cpf) == false){
+            showMessage("Digite um CPF Válido!!", "error");
             return;
         }
 
@@ -46,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const numberMobileRegex = /^(\d{2})\s(\d{5})[-.\s]?(\d{4})$/;
         if (!numberMobileRegex.test(numberMobile) || !numberMobileRegex.test(numberMobile)) {
             // Mostra uma mensagem de erro se o formato do número de telefone for inválido
-            showMessage("Formato de telefone inválido. Use 21 97008-0526.", "error");
+            showMessage("Formato de telefone celular inválido. Use 00 00000-0000.", "error");
             return;
         }
 
@@ -54,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const phoneRegex = /^(\d{2})\s(\d{4})[-.\s]?(\d{4})$/;
         if (!phoneRegex.test(phone) || !phoneRegex.test(phone)) {
             // Mostra uma mensagem de erro se o formato do número de telefone for inválido
-            showMessage("Formato de telefone inválido. Use 21 2405-2680.", "error");
+            showMessage("Formato de telefone fixo inválido. Use 00 0000-0000.", "error");
             return;
         }
 
@@ -78,11 +80,11 @@ document.addEventListener("DOMContentLoaded", function () {
             showMessage("As senhas não coincidem.", "error");
             return;
         }
-        /* Não estamos utilizando o LocalStorage
+       
         // Se todas as validações passarem, armazena as informações de login e redireciona para a tela de login
         localStorage.setItem("userLogin", login);
         localStorage.setItem("userPassword", password);
-        */
+        
 
         // Mostra mensagem de sucesso
         showMessage("Cadastro realizado com sucesso!", "success");
@@ -104,14 +106,67 @@ document.addEventListener("DOMContentLoaded", function () {
         // Cria um elemento de mensagem, define a classe e o texto
         const messageDiv = document.createElement("div");
         messageDiv.className = `message ${type}`;
+        messageDiv.animate([
+            {transform: 'scale(0)'},
+            {transform: 'scale(1)'}
+          ], 200);
+          
         messageDiv.innerText = message;
-
+        
         // Adiciona a mensagem ao contêiner
         messageContainer.appendChild(messageDiv);
+        
 
-        // Remove a mensagem após 3 segundos
+        // Remove a mensagem após 4 segundos
         setTimeout(() => {
             messageContainer.innerHTML = "";
-        }, 3000);
+        }, 4000);
     }
-});
+
+    function LimparCampos(){
+        registrationForm.reset()
+    }
+
+    function ValidaCpf(cpf){
+
+       cpf = cpf.replace(/\.|-/g, "");
+   
+       soma = 0;
+       soma +=cpf[0]*10;
+       soma +=cpf[1]*9;
+       soma +=cpf[2]*8;
+       soma +=cpf[3]*7;
+       soma +=cpf[4]*6;
+       soma +=cpf[5]*5;
+       soma +=cpf[6]*4;
+       soma +=cpf[7]*3;
+       soma +=cpf[8]*2;
+       soma = (soma*10)%11;
+       if(soma == 10 || soma == 11)
+           soma = 0;
+       if (soma != cpf[9])
+           return false;
+   
+       soma = 0;
+       soma +=cpf[0]*11;
+       soma +=cpf[1]*10;
+       soma +=cpf[2]*9;
+       soma +=cpf[3]*8;
+       soma +=cpf[4]*7;
+       soma +=cpf[5]*6;
+       soma +=cpf[6]*5;
+       soma +=cpf[7]*4;
+       soma +=cpf[8]*3;
+       soma +=cpf[9]*2;
+       soma = (soma*10)%11;
+       if(soma == 10 || soma == 11)
+        {
+            soma = 0;
+        }
+           
+       if(soma != cpf[10])
+        {
+            return false
+        }
+           
+   }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- Coding By CodingNepal - codingnepalweb.com -->
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="./../assets/css/stylelogin.css">
          
-    <title>Login & Registration Form</title> 
+    <title>Login</title> 
 
 </head>
 <body>
@@ -26,19 +26,24 @@
             <div class="form login">
                 <span class="title">Login</span>
 
-                <form action="#">
+                <form id="formLogin" method="post" action="index.php">
                     <div class="input-field">
-                        <input type="text" placeholder="Digite o seu login" >
+                        <input type="text" id="login" placeholder="Digite o seu login" >
                         <img src="./../assets/img/Login/user-3-line.png" alt="">
                     </div>
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Digite sua senha">
+                        <input type="password" id="senha" class="password" placeholder="Digite sua senha">
                         <img src="./../assets/img/Login/lock-password-line.png" alt="">
                     </div>
 
                     <div class="input-field button">
-                        <button type="submit" id="loginBtn" title="Login" onclick="loginAtivo ()">
+                        <button type="submit" id="loginBtn" title="Login">
                             <span class="btnLogin">Login</span>
+                        </button>
+                    </div>
+                    <div class="input-field button">
+                        <button  type="button" id="LimparCamposLogin" style="background:#aaa" >
+                        <span class="btnText">Limpar</span>
                         </button>
                     </div>
                 </form>
@@ -53,5 +58,13 @@
     </div>
     <div id="message-container" class="message-container"></div>
     <script src="./../assets/js/validacao-login.js"></script>
+
+    <script>
+    const LimparCamposLogin = document.getElementById("LimparCamposLogin")
+    const formLogin = document.getElementById('formLogin')
+    LimparCamposLogin.addEventListener("click",()=>{
+    formLogin.reset()
+    },false)
+    </script>
 </body>
 </html>

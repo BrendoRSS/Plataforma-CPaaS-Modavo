@@ -38,7 +38,7 @@
   </script>
 </head>
 
-<body>
+<body class="body">
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center" title="Voltar ao Topo da Página."><i
       class="bi bi-arrow-up-short"></i></a>
 
@@ -311,9 +311,9 @@
 
   <!-- Template Main JS File -->
   <script src="./../assets/js/main.js"></script>
-  <!-- Sair do Usuario-->
+  <!-- Sair do Usuario
   <script src="assets/js/sairUsuario.js"></script>
-  <!--Fim Sair do Usuario -->
+  Fim Sair do Usuario -->
 </body>
 
 </html>
