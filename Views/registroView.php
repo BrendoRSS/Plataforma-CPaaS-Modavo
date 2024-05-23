@@ -24,7 +24,7 @@
 
         <header>Registre-se</header>
 
-        <form id="registrationForm" method="post" OnSubmit="javascript:validateForm();">
+        <form id="registrationForm" method="post">
             <div class="form first">
                 <div class="details personal">
                     <span class="title">Dados para Cadastro</span>
@@ -125,10 +125,10 @@
                 <div class="row">
                     <div class="col-12-md-12" style="display:flex; justify-content:right;">
                         
-                        <button type="submit" class="btn btn-primary"style="margin-right:5px;">
+                        <button type="submit" class="btn btn-primary"style="margin-right:5px;" onclick="validateForm()">
                             <span class="btnText">Cadastrar</span>
                         </button>
-                        <button class="btn btn-secundary" style="background:#aaa" type="button" onclick="LimparCampos()"><span class="btnText" >Limpar</span></button>
+                        <button class="btn-limpar"  type="button" onclick="LimparCampos()"><span class="btnText" >Limpar</span></button>
                     </div>
                 </div>
                 <div class="col-12-md-12">

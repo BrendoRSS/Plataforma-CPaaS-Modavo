@@ -26,7 +26,7 @@
             <div class="form login">
                 <span class="title">Login</span>
 
-                <form id="formLogin" method="post" action="index.php">
+                <form id="formLogin" method="post">
                     <div class="input-field">
                         <input type="text" id="login" placeholder="Digite o seu login" >
                         <img src="./../assets/img/Login/user-3-line.png" alt="">
@@ -37,7 +37,7 @@
                     </div>
 
                     <div class="input-field button">
-                        <button type="submit" id="loginBtn" title="Login">
+                        <button type="submit" onclick="loginAtivo()" id="loginBtn" title="Login">
                             <span class="btnLogin">Login</span>
                         </button>
                     </div>
@@ -58,13 +58,5 @@
     </div>
     <div id="message-container" class="message-container"></div>
     <script src="./../assets/js/validacao-login.js"></script>
-
-    <script>
-    const LimparCamposLogin = document.getElementById("LimparCamposLogin")
-    const formLogin = document.getElementById('formLogin')
-    LimparCamposLogin.addEventListener("click",()=>{
-    formLogin.reset()
-    },false)
-    </script>
 </body>
 </html>

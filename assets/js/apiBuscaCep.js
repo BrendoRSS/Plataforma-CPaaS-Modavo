@@ -1,4 +1,7 @@
 // ========= BUSCADOR DE CEP ======= //
+import "validacao-cadastro.js";
+
+
 let cep = document.getElementById('txtCEP');
 function apiBuscaCep() {
     let cep = document.getElementById('txtCEP');

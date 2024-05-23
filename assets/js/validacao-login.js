@@ -1,8 +1,9 @@
 // Recupera as informações do localStorage
 const storedLogin = localStorage.getItem("userLogin");
 const storedPassword = localStorage.getItem("userPassword");
+const formLogin = document.getElementById("formLogin")
 
-form.addEventListener("submit", async (e) => {
+formLogin.addEventListener("submit", async (e) => {
     // Impede o comportamento padrão de envio do formulário
     e.preventDefault();
     loginAtivo()
@@ -15,7 +16,7 @@ function login(username, password) {
 
         showMessage("Login realizado com sucesso!", "success");
 
-        setTimeout(window.location.replace("index.php"), 3000); // Remova o argumento 'username' aqui
+        setTimeout(window.location.href = "index.php", 5000); // Remova o argumento 'username' aqui
     } else {
         showMessage("Usuário ou senha inválidos.", "error");
     }
@@ -64,5 +65,11 @@ function showMessage(message, type) {
         messageContainer.innerHTML = "";
     }, 3000);
 }
+
+    const LimparCamposLogin = document.getElementById("LimparCamposLogin")
+    LimparCamposLogin.addEventListener("click",()=>{
+    formLogin.reset()
+    },false)
+
 
   
