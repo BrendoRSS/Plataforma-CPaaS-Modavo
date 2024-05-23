@@ -47,7 +47,7 @@
 .container form{
     position: relative;
     margin-top: 16px;
-    
+    height: 750px;
     min-height: 490px;
     background-color: #fff;
     overflow: hidden;
@@ -152,9 +152,11 @@ form .fields .input-field{
     font-size: 14px;
     font-weight: 400;
 }
-
+form button[type="submit"]{
+ background-color: #73b2d9;
+}
 form button:hover{
-    background-color: #c9ff04;
+    background-color: #1F81C1;
 }
 
 form .backBtn i{
@@ -201,6 +203,7 @@ form .buttons button , .backBtn{
 .success {
     background-color: #4CAF50;
     color: white;
+    
 }
 
 .error{
