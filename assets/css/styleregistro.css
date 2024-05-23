@@ -19,7 +19,6 @@
     position: relative;
     max-width: 1000px;
     width: 100%;
-    
     border-radius: 6px;
     padding: 30px;
     margin: 0 15px;
@@ -48,7 +47,7 @@
 .container form{
     position: relative;
     margin-top: 16px;
-    height: 700px;
+    height: 750px;
     min-height: 490px;
     background-color: #fff;
     overflow: hidden;
@@ -154,16 +153,10 @@ form .fields .input-field{
     font-weight: 400;
 }
 form button[type="submit"]{
-    background-color:  #7fa0fc;
+ background-color: #73b2d9;
 }
-form button[type="submit"]:hover{
-    background-color: #4070f4;
-}
-.btn-limpar{
-    background-color:  #b9b9b9;
-}
-.btn-limpar:hover{
-    background-color:  #918f8f;
+form button:hover{
+    background-color: #1F81C1;
 }
 
 form .backBtn i{
@@ -210,6 +203,7 @@ form .buttons button , .backBtn{
 .success {
     background-color: #4CAF50;
     color: white;
+    
 }
 
 .error{
