@@ -158,6 +158,12 @@ form button[type="submit"]{
 form button:hover{
     background-color: #1F81C1;
 }
+.btn-limpar{
+    background-color: #929292;
+}
+.btn-limpar:hover{
+    background-color: #707070;
+}
 
 form .backBtn i{
     transform: rotate(180deg);
