@@ -61,10 +61,12 @@
       <i class="bi bi-list mobile-nav-toggle"></i>
 
     </nav><!-- .navbar -->
-    </div>
+    <button onclick = fontsize(aumentar) >Aumentar +</button>
+    <button onclick = fontsize(diminuir)>Diminuir -</button>
     <img src="./../assets/img/Icons/lua.png" width="40px" id="iconetrocarcor" onclick="mododark(this)">
     </div>
 </header><!-- End Header -->
 <!-- Template Main JS File -->
+  <script src="../assets/js/SizedaFonte.js"></script>
   <script src="./../assets/js/main.js"></script>
 </body>
