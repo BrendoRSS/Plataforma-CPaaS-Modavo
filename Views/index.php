@@ -32,6 +32,7 @@
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
       <script>
          $(function () {
+            $("#acessibilidade1").load("acessibilidade.php");
             $("#header1").load("header.php");
             $("#footer1").load("footer.php");
          });
@@ -41,7 +42,7 @@
 <body class="body">
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center" title="Voltar ao Topo da Página."><i
       class="bi bi-arrow-up-short"></i></a>
-
+  
   <header id="header1"></header>
   
 
@@ -311,6 +312,7 @@
 
   <!-- Template Main JS File -->
   <script src="./../assets/js/main.js"></script>
+  <script src="./../assets/js/sizedaFonte.js"></script>
   <!-- Sair do Usuario
   <script src="assets/js/sairUsuario.js"></script>
   Fim Sair do Usuario -->
