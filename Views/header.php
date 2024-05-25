@@ -56,18 +56,15 @@
       <li>
         <a class="nav-link scrollto active" href="index.php">CPaaS</a>
       </li>
-      <li>
-        <a class="nav-link scrollto" href="sobre-nos.php">Sobre Nós</a>
-      </li>
-      <li class="dropdown"><a href="#">
+      <li class="dropdown"><a href="#services">
         <span>Produtos</span> <i class="bi bi-chevron-down"></i>
       </a>
         <ul>
-          <li><a href="twoFactor.php">Autenticação de 2 Fatores</a>
+          <li><a href="#services">Autenticação de 2 Fatores</a>
           <li>
-          <li><a href="numero-mascara.php">Número Máscara</a></li>
-          <li><a href="sms-marketing.php">SMS Marketing</a></li>
-          <li><a href="Autenticação2FAview.php">Google Verified Calls</a></li>
+          <li><a href="#services">Número Máscara</a></li>
+          <li><a href="#services">SMS Marketing</a></li>
+          <li><a href="#services">Google Verified Calls</a></li>
         </ul>
       </li>
       <div id="sectionAtiva" style="display:flex">
@@ -120,4 +117,5 @@
   <!-- Template Main JS File -->
   <script src="./../assets/js/sizedaFonte.js"></script>
   <script src="./../assets/js/main.js"></script>
+  <script src="./../assets/js/modoDark.js"></script>
 </body>

@@ -1,9 +1,7 @@
 // ========= BUSCADOR DE CEP ======= //
-import "validacao-cadastro.js";
-
 
 let cep = document.getElementById('txtCEP');
-function apiBuscaCep() {
+function apiBuscaCep(){
     let cep = document.getElementById('txtCEP');
     if (cep !== "") {
         let url = "https://brasilapi.com.br/api/cep/v1/" + cep.value;

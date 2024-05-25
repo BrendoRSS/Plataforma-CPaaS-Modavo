@@ -32,8 +32,8 @@ function validateForm() {
         return;
     }
 
-    if (apiBuscaCep(localization)== false){
-        showMessage("Digite um CEP Válido!!", "error");
+    if (ValidaCpf(cpf)== false){
+        showMessage("Digite um CPF Válido!!", "error");
         return;
     }
 

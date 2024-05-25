@@ -1,4 +1,6 @@
 <!-- ======= Footer ======= -->
+<link rel="stylesheet" href="./../assets/css/style.css">
+<body>
 
 <footer id="footer" class="footer">
 
@@ -60,3 +62,7 @@
   </div>
 </div>
 </footer>
+
+  
+</body>
+<script src="./../assets/js/modoDark.js"></script>
