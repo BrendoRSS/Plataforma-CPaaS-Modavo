@@ -176,5 +176,7 @@ function ValidaCpf(cpf) {
      if (digito2 != cpf[10]) {
       return false;
     }
-
+    if(digito && digito2 == false){
+        Validacpf(cpf) = false;
+    }
 }
