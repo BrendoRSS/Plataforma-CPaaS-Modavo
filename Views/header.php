@@ -81,7 +81,7 @@
               <br>
               <li style="display: flex; justify-content: center;"><p>Olá, [Nome]!</p></li>
               <li><a class="dropdown-item" href="#"><i class="bi bi-gear-fill"> Editar usuário</i></a></li>
-              <li><a class="dropdown-item" href="crud/consulta.php"><i class="bi bi-search"> Consultar
+              <li><a class="dropdown-item" href="../Controllers/crud/consulta.php"><i class="bi bi-search"> Consultar
                     usuários [Master]</i>
                   </a>
               </li>
