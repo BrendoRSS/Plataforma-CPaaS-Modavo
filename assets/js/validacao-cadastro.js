@@ -35,6 +35,8 @@ function validateForm() {
     if (ValidaCpf(cpf)== false){
         showMessage("Digite um CPF Válido!!", "error");
         return;
+    }else{
+        showMessage("continue", "error");
     }
 
     // Verifica o comprimento do nome
@@ -131,7 +133,6 @@ function ValidaCpf(cpf) {
 
     cpf = cpf.replace(/\.|-/g, "");
 
-  
      soma = 0;
      soma += cpf[0] * 10;
      soma += cpf[1] * 9;
@@ -149,8 +150,10 @@ function ValidaCpf(cpf) {
         digito = 11 - valor;
      }
         
-     if (digito != cpf[9])
-         return false;
+     if (digito != cpf[9]){
+        return false;
+     }
+         
 
      soma2 = 0;
      soma2 += cpf[0] * 11;
@@ -171,7 +174,7 @@ function ValidaCpf(cpf) {
      }
 
      if (digito2 != cpf[10]) {
-      return false
+      return false;
     }
 
 }
