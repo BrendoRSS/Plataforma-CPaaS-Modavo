@@ -13,11 +13,11 @@
         $cpf = $_POST['cpf'];
         $numberMobile = $_POST['numberMobile'];
         $phone = $_POST['phone'];
-        $localization = $_POST['localization'];
+        $cep = $_POST['localization'];
         $estado = $_POST['estado'];
         $cidade = $_POST['cidade'];
         $bairro = $_POST['bairro'];
-        $rua = $_POST['rua'];
+        $logradouro = $_POST['logradouro'];
         $numero = $_POST['numero'];
         $complemento = $_POST['complemento'];
         $login = $_POST['login'] ?? '';
@@ -30,13 +30,13 @@
             exit;
         }
         */
-        print_r($_POST);
+
         $sql = "INSERT INTO usuários VALUES (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         
         if($stmt = mysqli_prepare($connection, $sql)){
 
             // liga as variáveis do "prepared statement" aos parâmetros que foram passados
-            mysqli_stmt_bind_param($stmt, 'sss', $name, $dateOfBirth, $cpf, $gender, $motherName, $numberMobile, $phone, $localization, $bairro, $cidade, $estado, $numeroRedidencia, $complemento, $login, $password,$tipoUsuario);
+            mysqli_stmt_bind_param($stmt, 'sssssssisssssssss', $name, $dateOfBirth, $cpf, $gender, $motherName, $numberMobile, $phone, $cep, $logradouro, $bairro, $cidade, $estado, $numeroRedidencia, $complemento, $login, $password, $tipoUsuario);
             
             // Execute a query já com os "prepared statement" ajustados
             if(mysqli_stmt_execute($stmt)){
@@ -51,7 +51,7 @@
                 mysqli_close($connection);
     
                 // Se o usuário foi inserido com sucesso, então redireciono para a página principal.
-                header("location: index.php");
+                header("location: ../Views/index.php");
                 exit();
             } else{
                 header("location: error.php");
@@ -63,6 +63,5 @@
         
     }
     
-   
      
 ?>

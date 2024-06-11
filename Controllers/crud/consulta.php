@@ -24,14 +24,16 @@
 
 <body>
     <div class="container">
-    <div class="form-image">
-            <img src="../../assets/img/logo-modavo-cpaas.png" alt="Form Image">
+        <div class="row">
+    <div class="form-image" style="margin-top:20px;margin-bottom:20px">
+            <img src="../../assets/img/logo-modavo-cpaas.png" alt="Form Image" width="200px">
         </div>
         <div class="row">
-            <div class="details personal mb-5">
-                <h1 class="title">Usuários</h1>
+            <div class="details personal mb-5" style="display:flex;justify-content:center;align-itens:center">
+                <h2 class="title">Usuários</h2>
             </div>
-            <div class="col-6-md-12" style="display:flex; justify-content:center;">
+            <div class="container">
+            <div class="col-6-md-12" style="display:flex; justify-content:center; width:auto">
                 <?php
                 // Aqui estou incluindo o arquivo de configuração
                 require_once "config.php";
@@ -39,7 +41,7 @@
                 $sql = "SELECT * FROM usuários";
                 if ($result = mysqli_query($connection, $sql)) {
                     if (mysqli_num_rows($result) > 0) {
-                        echo '<table border="1" class="table"> ';
+                        echo '<table border="1" class="table" style="font-size:12px"> ';
                         echo "<tr>";
                         echo "<th>#</th>";
                         echo "<th>Nome</th>";
@@ -80,8 +82,10 @@
                             echo "<td>" . $row['Login'] . "</td>";
                             echo "<td>" . $row['Senha'] . "</td>";
                             echo "<td>";
-                            echo '<a href="read.php?idUsuário=' . $row['idUsuário'] . '">visualizar</a> | ';
-                            echo '<a href="delete.php?idUsuário=' . $row['idUsuário'] . '">excluir</a>';
+                            echo '<a href="read.php?idUsuário=' . $row['idUsuário'] . '">visualizar  </a>';
+                            if ($row['Login']!="Master"){
+                                echo '|  <a href="delete.php?idUsuário=' . $row['idUsuário'] . '">excluir</a>';
+                            };
                             echo "</td>";
                             echo "</tr>";
                         }
@@ -106,6 +110,8 @@
             </div>
 
         </div>
+    </div>
+    </div>
     </div>
     <!-- Vendor JS Files -->
   <script src="./assets/vendor/purecounter/purecounter_vanilla.js"></script>

@@ -3,14 +3,14 @@
 require_once "config.php";
 
 // Preparando o statement do comando select
-$sql = "SELECT nome, login, senha FROM USUARIOS WHERE id = ?";
+$sql = "SELECT Nome, Login, Senha FROM Usuários WHERE idUsuário = ?";
 
 if ($stmt = mysqli_prepare($connection, $sql)) {
     // liga as variáveis do "prepared statement" ao id passado por parâmetro
     mysqli_stmt_bind_param($stmt, "i", $param_id);
 
     // seta o parâmetro.
-    $param_id = trim($_GET["id"]);
+    $param_id = trim($_GET["idUsuário"]);
 
     // executa a consulta (prepared statement)
     if (mysqli_stmt_execute($stmt)) {
@@ -22,9 +22,9 @@ if ($stmt = mysqli_prepare($connection, $sql)) {
             $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
             // Recupera cada valor do campo do row.
-            $nome = $row["nome"];
-            $login = $row["login"];
-            $senha = $row["senha"];
+            $nome = $row["Nome"];
+            $login = $row["Login"];
+            $senha = $row["Senha"];
         } else {
             // Se na sua url não tiver um id válido. redireciona para a página de erro
             header("location: error.php");

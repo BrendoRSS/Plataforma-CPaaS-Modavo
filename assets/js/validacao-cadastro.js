@@ -22,7 +22,7 @@ function validateForm() {
     const estado = $("#txtEstado").val();
     const cidade = $("#txtCidade").val();
     const bairro = $("#txtBairro").val();
-    const rua = $("#txtRua").val();
+    const logradouro = $("#txtRua").val();
     const numero = $("#txtNumero").val();
     const complemento = $("#txtComplemento").val();
     const login = $("#login").val();
@@ -110,7 +110,7 @@ function validateForm() {
     formData.append('estado', estado);
     formData.append('cidade', cidade);
     formData.append('bairro', bairro);
-    formData.append('rua', rua);
+    formData.append('logradouro', logradouro);
     formData.append('numero', numero);
     formData.append('complemento', complemento);
     formData.append('login', login);
@@ -125,7 +125,7 @@ function validateForm() {
     
     .then(response => response.text())
     .then(data => {
-        alert(data);
+        
     })
     .catch(error => {
         console.error('Erro:', error);
@@ -133,8 +133,7 @@ function validateForm() {
 
     setTimeout(() => {
         // Cria um objeto FormData
-    
-        window.location.href = "../Controllers/crud/create.php"
+        window.location.href = "../Views/index.php"
     }, 3000);
 }
 

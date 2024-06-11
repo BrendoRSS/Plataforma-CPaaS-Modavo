@@ -74,24 +74,24 @@
                         </div>
 
                         <div class="input-field">
-                            <label for="localization">Cep</label>
+                            <label for="txtCEP">Cep</label>
                             <input type="text" id="txtCEP" value="21725360" placeholder="Digite o seu Cep" onblur="apiBuscaCep()">
                         </div>
                         <div class="input-field">
-                            <label for="localization">Estado</label>
+                            <label for="txtEstado">Estado</label>
                             <input type="text" id="txtEstado" name="txtEstado" placeholder="Estado" disabled>
                         </div>
                         <div class="input-field">
-                            <label for="localization">Cidade</label>
+                            <label for="txtCidade">Cidade</label>
                             <input type="text" id="txtCidade" name="cidade" placeholder="Cidade" disabled>
                         </div>
                         <div class="input-field">
-                            <label for="localization">Bairro</label>
+                            <label for="txtBairro">Bairro</label>
                             <input type="text" id="txtBairro" name="bairro" placeholder="Bairro" disabled>
                         </div>
                         <div class="input-field">
-                            <label for="localization">Rua</label>
-                            <input type="text" id="txtRua" placeholder="Rua" disabled>
+                            <label for="txtLogradouro">Logradouro</label>
+                            <input type="text" id="txtRua" placeholder="Logradouro" disabled>
                         </div>
                         <div class="input-field">
                             <label for="txtNumero">Número</label>

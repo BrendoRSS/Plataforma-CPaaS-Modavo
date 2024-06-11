@@ -4,7 +4,7 @@
     require_once "config.php";
     
     // Preparando o delete statement
-    $sql = "DELETE FROM usuarios WHERE idUsuário = ?";
+    $sql = "DELETE FROM usuários WHERE idUsuário = ?";
     
     if($stmt = mysqli_prepare($connection, $sql)){
         // liga as variáveis do "prepared statement" ao id passado por parâmetro
