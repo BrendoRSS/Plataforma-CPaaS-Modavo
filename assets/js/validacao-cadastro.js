@@ -172,52 +172,54 @@ function LimparCampos() {
 
 function ValidaCpf(cpf) {
 
-    cpf = cpf.replace(/\.|-/g, "");
-
-     soma = 0;
-     soma += cpf[0] * 10;
-     soma += cpf[1] * 9;
-     soma += cpf[2] * 8;
-     soma += cpf[3] * 7;
-     soma += cpf[4] * 6;
-     soma += cpf[5] * 5;
-     soma += cpf[6] * 4;
-     soma += cpf[7] * 3;
-     soma += cpf[8] * 2;
-     valor = (soma*10) % 11;
-     if (valor <=1){
-        digito = 0;
-     } else{
-        digito = 11 - valor;
-     }
-        
-     if (digito != cpf[9]){
-        return false;
-     }
-         
-
-     soma2 = 0;
-     soma2 += cpf[0] * 11;
-     soma2 += cpf[1] * 10;
-     soma2 += cpf[2] * 9;
-     soma2 += cpf[3] * 8;
-     soma2 += cpf[4] * 7;
-     soma2 += cpf[5] * 6;
-     soma2 += cpf[6] * 5;
-     soma2 += cpf[7] * 4;
-     soma2 += cpf[8] * 3;
-     soma2 += cpf[9] * 2;
-     valo2 = (soma2*10) % 11;
-     if (valor2 <= 1) {
-         digito2 = 0;
-     }else{
-        digito2 = 11 - valor;
-     }
-
-     if (digito2 != cpf[10]) {
-      return false;
-    }
+    var Soma = 0
+    var Resto
+  
+    var strCPF = String(cpf).replace(/[^\d]/g, '')
     
-}
+    if (strCPF.length !== 11)
+       return false
+    
+    if ([
+      '00000000000',
+      '11111111111',
+      '22222222222',
+      '33333333333',
+      '44444444444',
+      '55555555555',
+      '66666666666',
+      '77777777777',
+      '88888888888',
+      '99999999999',
+      ].indexOf(strCPF) !== -1)
+      return false
+  
+    for (i=1; i<=9; i++)
+      Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (11 - i);
+  
+    Resto = (Soma * 10) % 11
+  
+    if ((Resto == 10) || (Resto == 11)) 
+      Resto = 0
+  
+    if (Resto != parseInt(strCPF.substring(9, 10)) )
+      return false
+  
+    Soma = 0
+  
+    for (i = 1; i <= 10; i++)
+      Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (12 - i)
+  
+    Resto = (Soma * 10) % 11
+  
+    if ((Resto == 10) || (Resto == 11)) 
+      Resto = 0
+  
+    if (Resto != parseInt(strCPF.substring(10, 11) ) )
+      return false
+  
+    return true
+  }
+
 
 
