@@ -143,7 +143,7 @@ function ValidaCpf(cpf) {
      soma += cpf[6] * 4;
      soma += cpf[7] * 3;
      soma += cpf[8] * 2;
-     valor = soma % 11;
+     valor = (soma*10) % 11;
      if (valor <=1){
         digito = 0;
      } else{
@@ -166,7 +166,7 @@ function ValidaCpf(cpf) {
      soma2 += cpf[7] * 4;
      soma2 += cpf[8] * 3;
      soma2 += cpf[9] * 2;
-     valo2 = soma2 % 11;
+     valo2 = (soma2*10) % 11;
      if (valor2 <= 1) {
          digito2 = 0;
      }else{
@@ -176,7 +176,6 @@ function ValidaCpf(cpf) {
      if (digito2 != cpf[10]) {
       return false;
     }
-    if(digito && digito2 == false){
-        Validacpf(cpf) = false;
-    }
+    
 }
+
