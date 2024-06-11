@@ -30,7 +30,7 @@
                     <div class="fields">
                         <div class="input-field">
                             <label for="fullName">Nome</label>
-                            <input type="text" id="fullName" name="nome" placeholder="Digite seu nome" autofocus>
+                            <input type="text" id="fullName" name="nome" value="Brendo Ricardo Souza da Silva" placeholder="Digite seu nome" autofocus>
                         </div>
 
                         <div class="input-field">
@@ -42,7 +42,7 @@
                             <label for="gender">Sexo</label>
                             <select id="gender">
                                 <option disabled selected>Selecione o Sexo</option>
-                                <option>Masculino</option>
+                                <option selected>Masculino</option>
                                 <option>Feminino</option>
                                 <option>Outros</option>
                             </select>
@@ -50,67 +50,71 @@
 
                         <div class="input-field">
                             <label for="motherName">Nome Materno</label>
-                            <input type="text" id="motherName" placeholder="Digite o nome materno">
+                            <input type="text" id="motherName" value="Luciana Vieira Souza" placeholder="Digite o nome materno">
                         </div>
 
                         <div class="input-field">
                             <label for="cpf">CPF</label>
-                            <input type="text" name="cpfCadastro" id="cpf" placeholder="Digite seu CPF">
+                            <input type="text" name="cpfCadastro" value="14670545779" id="cpf" placeholder="Digite seu CPF">
                         </div>
 
                         <div class="input-field">
                             <label for="email">E-mail</label>
-                            <input type="text" id="email" placeholder="Digite seu e-mail">
+                            <input type="text" id="email" value="brendo" placeholder="Digite seu e-mail">
                         </div>
 
                         <div class="input-field">
                             <label for="numberMobile">Telefone Celular</label>
-                            <input type="tel" id="numberMobile" placeholder="(XX) XXXXX-XXXX">
+                            <input type="tel" id="numberMobile" value="21 99497-2142" placeholder="(XX) XXXXX-XXXX">
                         </div>
 
                         <div class="input-field">
                             <label for="phone">Telefone Fixo</label>
-                            <input type="tel" id="phone" placeholder="(XX) XXXX-XXXX">
+                            <input type="tel" id="phone" value="21 3467-5592" placeholder="(XX) XXXX-XXXX">
                         </div>
 
                         <div class="input-field">
                             <label for="localization">Cep</label>
-                            <input type="text" id="txtCEP" placeholder="Digite o seu Cep" onblur="apiBuscaCep()">
+                            <input type="text" id="txtCEP" value="21725360" placeholder="Digite o seu Cep" onblur="apiBuscaCep()">
                         </div>
                         <div class="input-field">
                             <label for="localization">Estado</label>
-                            <input type="text" id="txtEstado" placeholder="Estado" disabled>
+                            <input type="text" id="txtEstado" name="txtEstado" placeholder="Estado" disabled>
                         </div>
                         <div class="input-field">
                             <label for="localization">Cidade</label>
-                            <input type="text" id="txtCidade" placeholder="Cidade" disabled>
+                            <input type="text" id="txtCidade" name="cidade" placeholder="Cidade" disabled>
                         </div>
                         <div class="input-field">
                             <label for="localization">Bairro</label>
-                            <input type="text" id="txtBairro" placeholder="Bairro" disabled>
+                            <input type="text" id="txtBairro" name="bairro" placeholder="Bairro" disabled>
                         </div>
                         <div class="input-field">
                             <label for="localization">Rua</label>
                             <input type="text" id="txtRua" placeholder="Rua" disabled>
                         </div>
                         <div class="input-field">
-                            <label for="localization">Número</label>
-                            <input type="text" id="localization" placeholder="Digite o seu Endereço completo">
+                            <label for="txtNumero">Número</label>
+                            <input type="text" id="txtNumero"  value="230" placeholder="Digite o seu Endereço completo">
+                        </div>
+                        <div class="input-field">
+                            <label for="txtComplemento">Complemento</label>
+                            <input type="text" id="txtComplemento"  value="complemento" placeholder="Digite o seu Endereço completo">
                         </div>
 
                         <div class="input-field">
                             <label for="login">Login</label>
-                            <input type="text" name="login" id="login" placeholder="Digite seu login">
+                            <input type="text" name="login" value="brendo" id="login" placeholder="Digite seu login">
                         </div>
 
                         <div class="input-field">
                             <label for="password">Senha</label>
-                            <input id="password" name="senha" type="password" placeholder="Digite sua senha">
+                            <input id="password" name="senha" type="password" value="brendori" placeholder="Digite sua senha">
                         </div>
 
                         <div class="input-field">
                             <label for="confirmPassword">Confirme sua Senha</label>
-                            <input id="confirmPassword" type="password" placeholder="Digite sua senha novamente">
+                            <input id="confirmPassword" type="password" value="brendori" placeholder="Digite sua senha novamente">
                         </div>
                         <div class="input-field">
 
@@ -134,8 +138,10 @@
                 </div>
             </div>
         </form>
-
+            
     </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./../assets/js/apiBuscaCep.js"></script>
     <script src="./../assets/js/validacao-cadastro.js"></script>
 

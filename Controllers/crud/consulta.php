@@ -11,23 +11,21 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link rel="stylesheet" type="text/css" href="style.php" />
-    <link rel="stylesheet" type="text/css" href="styleregistro.php" />
     <title>Consulta</title>
 </head>
 
 <body>
     <div class="container">
     <div class="form-image">
-            <img src="../assets/img/logo-modavo-cpaas.png" alt="Form Image">
+            <img src="../../assets/img/logo-modavo-cpaas.png" alt="Form Image">
         </div>
         <div class="row">
             <div class="details personal mb-5">
@@ -38,27 +36,52 @@
                 // Aqui estou incluindo o arquivo de configuração
                 require_once "config.php";
                 // Montando o comando select para exibir a lista de usuários
-                $sql = "SELECT * FROM usuarios";
+                $sql = "SELECT * FROM usuários";
                 if ($result = mysqli_query($connection, $sql)) {
                     if (mysqli_num_rows($result) > 0) {
                         echo '<table border="1" class="table"> ';
                         echo "<tr>";
                         echo "<th>#</th>";
                         echo "<th>Nome</th>";
+                        echo "<th>Data Nascimento</th>";
+                        echo "<th>CPF</th>";
+                        echo "<th>Gênero</th>";
+                        echo "<th>Nome da Mãe</th>";
+                        echo "<th>Telefone Celular</th>";
+                        echo "<th>Telefone Fixo</th>";
+                        echo "<th>Cep</th>";
+                        echo "<th>Logradouro</th>";
+                        echo "<th>Bairro</th>";
+                        echo "<th>Cidade</th>";
+                        echo "<th>Estado</th>";
+                        echo "<th>Nº</th>";
+                        echo "<th>Complemento</th>";
                         echo "<th>Login</th>";
                         echo "<th>Senha</th>";
                         echo "<th>Ações</th>";
                         echo "</tr>";
                         while ($row = mysqli_fetch_array($result)) {
                             echo "<tr>";
-                            echo "<td>" . $row['USU_CODIGO'] . "</td>";
-                            echo "<td>" . $row['USU_NOME'] . "</td>";
-                            echo "<td>" . $row['USU_LOGIN'] . "</td>";
-                            echo "<td>" . $row['USU_SENHA'] . "</td>";
+                            echo "<td>" . $row['idUsuário'] . "</td>";
+                            echo "<td>" . $row['Nome'] . "</td>";
+                            echo "<td>" . $row['dataNascimento'] . "</td>";
+                            echo "<td>" . $row['CPF'] . "</td>";
+                            echo "<td>" . $row['sexo'] . "</td>";
+                            echo "<td>" . $row['nomeMae'] . "</td>";
+                            echo "<td>" . $row['telefoneCelular'] . "</td>";
+                            echo "<td>" . $row['TelefoneFixo'] . "</td>";
+                            echo "<td>" . $row['Cep'] . "</td>";
+                            echo "<td>" . $row['Logradouro'] . "</td>";
+                            echo "<td>" . $row['Bairro'] . "</td>";
+                            echo "<td>" . $row['cidade'] . "</td>";
+                            echo "<td>" . $row['Estado'] . "</td>";
+                            echo "<td>" . $row['NumeroResidencia'] . "</td>";
+                            echo "<td>" . $row['Complemento'] . "</td>";
+                            echo "<td>" . $row['Login'] . "</td>";
+                            echo "<td>" . $row['Senha'] . "</td>";
                             echo "<td>";
-                            echo '<a href="read.php?id=' . $row['USU_CODIGO'] . '">visualizar</a> | ';
-                            echo '<a href="update_form.php?id=' . $row['USU_CODIGO'] . '">atualizar</a> | ';
-                            echo '<a href="delete.php?id=' . $row['USU_CODIGO'] . '">excluir</a>';
+                            echo '<a href="read.php?idUsuário=' . $row['idUsuário'] . '">visualizar</a> | ';
+                            echo '<a href="delete.php?idUsuário=' . $row['idUsuário'] . '">excluir</a>';
                             echo "</td>";
                             echo "</tr>";
                         }
@@ -79,13 +102,20 @@
 
             </div>
             <div class="col-6-md-12 mt-5" style="display:flex; justify-content:center;">
-                <a href="create_form.php" class="btn btn-success mx-3">Novo Usuário</a>
-
-                <a href="../index.html" class="btn btn-danger">Voltar</a>
+                <a href="../../Views/index.php" class="btn btn-danger">Voltar</a>
             </div>
 
         </div>
     </div>
+    <!-- Vendor JS Files -->
+  <script src="./assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="./../assets/vendor/aos/aos.js"></script>
+  <script src="./../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="./../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="./../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="./../assets/vendor/php-email-form/validate.js"></script>
+
 </body>
 
 </html>

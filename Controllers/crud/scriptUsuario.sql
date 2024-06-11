@@ -11,7 +11,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 
 CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
 
-CREATE TABLE IF NOT EXISTS `mydb`.`Usuário` (
+CREATE TABLE IF NOT EXISTS `mydb`.`usuários` (
   `idUsuário` INT(11) NOT NULL AUTO_INCREMENT,
   `Nome` VARCHAR(45) NULL DEFAULT NULL,
   `dataNascimento` DATE NULL DEFAULT NULL,
@@ -35,23 +35,21 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`Erros2FA` (
-  `Usuário_idUsuário` INT(11) NOT NULL,
+  `Usuarios_idUsuário` INT(11) NOT NULL,
   `Nome` VARCHAR(45) NULL DEFAULT NULL,
   `Pergunta` VARCHAR(45) NULL DEFAULT NULL,
   `repostaErrada` VARCHAR(45) NULL DEFAULT NULL,
   `respostaCerta` VARCHAR(45) NULL DEFAULT NULL,
   `Data` DATE NULL DEFAULT NULL,
   `Hora` VARCHAR(45) NULL DEFAULT NULL,
-  INDEX `fk_Erros2FA_Usuário_idx` (`Usuário_idUsuário` ASC) VISIBLE,
+  INDEX `fk_Erros2FA_Usuário_idx` (`Usuarios_idUsuário` ASC),
   CONSTRAINT `fk_Erros2FA_Usuário`
-    FOREIGN KEY (`Usuário_idUsuário`)
-    REFERENCES `mydb`.`Usuário` (`idUsuário`)
+    FOREIGN KEY (`Usuarios_idUsuário`)
+    REFERENCES `mydb`.`usuários` (`idUsuário`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
-
-
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;

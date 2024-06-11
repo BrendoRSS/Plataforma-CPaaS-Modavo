@@ -6,27 +6,33 @@ const messageContainer = document.getElementById("messageContainer");
 form.addEventListener("submit", async (e) => {
     // Impede o comportamento padrão de envio do formulário
     e.preventDefault();
-    validateForm()
+    validateForm();
 });
 
 // Função para validar o formulário
 function validateForm() {
-    const fullName = document.getElementById("fullName").value;
-    const dateOfBirth = document.getElementById("date-of-birth").value;
-    const gender = document.getElementById("gender").value;
-    const motherName = document.getElementById("motherName").value;
-    const cpf = document.getElementById("cpf").value;
-    const numberMobile = document.getElementById("numberMobile").value;
-    const phone = document.getElementById("phone").value;
-    const localization = document.getElementById("txtCEP").value;
-    const login = document.getElementById("login").value;
-    const password = document.getElementById("password").value;
-    const confirmPassword = document.getElementById("confirmPassword").value;
+    const fullName = $("#fullName").val();
+    const dateOfBirth = $("#date-of-birth").val();
+    const gender = $("#gender").val();
+    const motherName = $("#motherName").val();
+    const cpf = $("#cpf").val();
+    const numberMobile = $("#numberMobile").val();
+    const phone = $("#phone").val();
+    const localization = $("#txtCEP").val();
+    const estado = $("txtEstado").val();
+    const cidade = $("txtCidade").val();
+    const bairro = $("txtBairro").val();
+    const rua = $("txtRua").val();
+    const numero = $("txtNumero").val();
+    const complemento = $("txtComplemento").val();
+    const login = $("#login").val();
+    const password = $("#password").val();
+    const confirmPassword = $("#confirmPassword").val();
     // Obtém os valores dos campos do formulário
     // Verifica se todos os campos obrigatórios estão preenchidos
     const requiredFields = [fullName, dateOfBirth, gender, motherName, cpf, numberMobile, phone, localization, login, password, confirmPassword];
 
-    if (requiredFields.some(field => field.trim() === "")) {
+    if (requiredFields.some(field => field === "")) {
         // Mostra uma mensagem de erro se algum campo estiver vazio
         showMessage("Preencha todos os campos obrigatórios!", "error");
         return;
@@ -92,8 +98,43 @@ function validateForm() {
     showMessage("Cadastro realizado com sucesso!", "success");
 
     // Redireciona para a tela de login após um atraso
+    let formData = new FormData();
+    formData.append('fullName', fullName);
+    formData.append('dateOfBirth', dateOfBirth);
+    formData.append('gender', gender);
+    formData.append('motherName', motherName);
+    formData.append('cpf', cpf);
+    formData.append('numberMobile', numberMobile);
+    formData.append('phone', phone);
+    formData.append('localization', localization);
+    formData.append('estado', estado);
+    formData.append('cidade', cidade);
+    formData.append('bairro', bairro);
+    formData.append('rua', rua);
+    formData.append('numero', numero);
+    formData.append('complemento', complemento);
+    formData.append('login', login);
+    formData.append('password', password);
+
+
+    // Envia os dados via fetch
+    fetch('../Controllers/crud/create.php', {
+        method: 'POST',
+        body: formData
+    })
+    
+    .then(response => response.text())
+    .then(data => {
+        alert(data);
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+    });
+
     setTimeout(() => {
-        window.location.href = "loginView.php";
+        // Cria um objeto FormData
+    
+        window.location.href = "../Controllers/crud/create.php"
     }, 3000);
 }
 
@@ -178,4 +219,5 @@ function ValidaCpf(cpf) {
     }
     
 }
+
 
