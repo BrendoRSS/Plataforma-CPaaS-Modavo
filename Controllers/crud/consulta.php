@@ -29,7 +29,7 @@
             <img src="../../assets/img/logo-modavo-cpaas.png" alt="Form Image" width="200px">
         </div>
         <div class="row">
-            <div class="details personal mb-5" style="display:flex;justify-content:center;align-itens:center">
+            <div class="details personal mb-5" style="display:flex;justify-content:center;">
                 <h2 class="title">Usuários</h2>
             </div>
             <div class="container">
@@ -83,7 +83,7 @@
                             echo "<td>" . $row['Senha'] . "</td>";
                             echo "<td>";
                             echo '<a href="read.php?idUsuário=' . $row['idUsuário'] . '">visualizar  </a>';
-                            if ($row['Login']!="Master"){
+                            if ($row['idUsuário'] != "27"){
                                 echo '|  <a href="delete.php?idUsuário=' . $row['idUsuário'] . '">excluir</a>';
                             };
                             echo "</td>";
