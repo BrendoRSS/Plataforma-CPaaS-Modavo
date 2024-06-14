@@ -5,7 +5,7 @@ session_start();
 require_once "config.php";
     print_r($_SESSION);
     /*$_SESSION['loginLogin'] = $login;
-    $_SESSION['loginSenha'] = $senha;*/
+    $_SESSION['senhaLogin'] = $senha;*/
     
     /*// preparando o statement do comando update
     $sql = "UPDATE Usuarios SET usu_nome=?, usu_login=?, usu_senha=? WHERE usu_codigo=?";

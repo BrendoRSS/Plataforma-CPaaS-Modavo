@@ -1,5 +1,6 @@
 <?php 
   session_start();
+  print_r($_SESSION)
 ?>
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script>
@@ -72,8 +73,8 @@
       </li>
 
       <?php 
-      
       if(empty($_SESSION)){
+
         echo"<div id=\"botoesAcesso\" style=\"display:flex\">
         <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\" >
         <li style=\"display:flex\">
@@ -125,11 +126,6 @@
       }
       
       ?>
-
-      
-      
-      
-
       </ul>
 
       <i class="bi bi-list mobile-nav-toggle"></i>
