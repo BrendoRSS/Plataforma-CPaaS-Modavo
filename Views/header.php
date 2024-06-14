@@ -1,3 +1,6 @@
+<?php 
+  session_start();
+?>
 <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <script>
   $(function() {
@@ -67,43 +70,64 @@
           <li><a href="#services">Google Verified Calls</a></li>
         </ul>
       </li>
-      <div id="sectionAtiva" style="display:flex">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="bi bi-person-circle"> [Nome]</i>
 
+      <?php 
+      
+      if(empty($_SESSION)){
+        echo"<div id=\"botoesAcesso\" style=\"display:flex\">
+        <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\" >
+        <li style=\"display:flex\">
+        <a class=\"nav-link scrollto\" href=\"loginView.php\">Login</a>
+        <a class=\"getstarted scrollto\" href=\"registroView.php\">Cadastre-se</a>
+      </li>
+      </ul>
+        
+      </div>";
+      
+      }else{
+        echo "<div id='sectionAtiva' style='display:flex;margin-right:40px'>
+        <ul class='navbar-nav me-auto mb-2 mb-lg-0'>
+          <li class='nav-item dropdown'>
+            <a class='nav-link dropdown-toggle' href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
+              <i class='bi bi-person-circle'>";
+              echo " ";
+              echo $_SESSION['loginLogin']??'Sem cadastro';
+              echo "</i>
             </a>
-            <ul class="dropdown-menu">
+            <ul class='dropdown-menu'>
               <br>
-              <li style="display: flex; justify-content: center;"><i class="bi bi-person-circle d-flex"></i>
+              <li style='display: flex; justify-content: center;'><i class='bi bi-person-circle d-flex'></i>
               </li>
               <br>
-              <li style="display: flex; justify-content: center;"><p>Olá, [Nome]!</p></li>
-              <li><a class="dropdown-item" href="#"><i class="bi bi-gear-fill"> Editar usuário</i></a></li>
-              <li><a class="dropdown-item" href="../Controllers/crud/consulta.php"><i class="bi bi-search"> Consultar
+              <li style='display: flex; justify-content: center;'>
+                ";
+                
+              echo 'Olá, '; 
+              echo $_SESSION['loginLogin']??'Sem cadastro';
+              echo "
+              </li>
+              <li><a class='dropdown-item' href='../Controllers/crud/update.php'><i class='bi bi-gear-fill'> Editar usuário</i></a></li>
+              <li><a class='dropdown-item' href='../Controllers/crud/consulta.php'><i class='bi bi-search'> Consultar
                     usuários [Master]</i>
                   </a>
               </li>
               <li>
-                <hr class="dropdown-divider">
+                <hr class='dropdown-divider'>
               </li>
-              <li style="display: flex; justify-content: center;">
-                <button class="btn btn-danger" type="button" name="sair" id="sair" onclick="sairUsuario()">Sair</button>
+              <li style='display: flex; justify-content: center;'>
+                <form action='../Controllers/crud/sairUsuario.php' id='formSair' method='post'><button class='btn btn-danger' type='submit' name='sair' id='sair'>Sair</button></form>
+                
               </li>
             </ul>
           </li>
         </ul>
-      </div>
-      <div id="botoesAcesso" style="display:flex">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
-        <li style="display:flex">
-        <a class="nav-link scrollto" href="loginView.php">Login</a>
-        <a class="getstarted scrollto" href="registroView.php">Cadastre-se</a>
-      </li>
-      </ul>
-        
-      </div>
+      </div>";
+      }
+      
+      ?>
+
+      
+      
       
 
       </ul>
@@ -117,5 +141,6 @@
   <!-- Template Main JS File -->
   <script src="./../assets/js/sizedaFonte.js"></script>
   <script src="./../assets/js/main.js"></script>
+  <script src="../../assets/js/sairUsuario.js"></script>
   <script src="./../assets/js/modoDark.js"></script>
 </body>

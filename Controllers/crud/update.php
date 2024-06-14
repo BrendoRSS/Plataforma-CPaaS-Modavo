@@ -1,15 +1,13 @@
+
 <?php
+session_start();
 // Aqui estou incluindo o arquivo de configuração
 require_once "config.php";
- 
-
-// Get hidden input value
-$id = $_POST["id"];   
-$nome = $_POST["nome"];
-$login = $_POST["login"];
-$senha = $_POST["senha"];
+    print_r($_SESSION);
+    /*$_SESSION['loginLogin'] = $login;
+    $_SESSION['loginSenha'] = $senha;*/
     
-    // preparando o statement do comando update
+    /*// preparando o statement do comando update
     $sql = "UPDATE Usuarios SET usu_nome=?, usu_login=?, usu_senha=? WHERE usu_codigo=?";
          
     if($stmt = mysqli_prepare($connection, $sql)){
@@ -42,3 +40,5 @@ $senha = $_POST["senha"];
             exit();
         }
     }
+        
+    */

@@ -196,6 +196,16 @@ body{
 /* Fim Estilização Botão de Login */
 
 
+#messageContainer {
+    margin-top: 10px; /* Adjust the margin as needed */
+}
+
+.message {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
 
 .success-message {
     background-color: #fff;

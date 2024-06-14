@@ -11,6 +11,8 @@
 
     <!-- ===== CSS ===== -->
     <link rel="stylesheet" href="./../assets/css/stylelogin.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
          
     <title>Login</title> 
 
@@ -26,23 +28,24 @@
             <div class="form login">
                 <span class="title">Login</span>
 
-                <form id="formLogin" method="post">
+                <form id="formLogin" method="post" action="../Controllers/crud/testeLogin.php">
                     <div class="input-field">
-                        <input type="text" id="login" placeholder="Digite o seu login" >
+                        <input type="text" id="login" name="loginLogin" placeholder="Digite o seu login" >
                         <img src="./../assets/img/Login/user-3-line.png" alt="">
                     </div>
                     <div class="input-field">
-                        <input type="password" id="senha" class="password" placeholder="Digite sua senha">
+                        <input type="password" id="senha" name="senhaLogin" class="password" placeholder="Digite sua senha">
                         <img src="./../assets/img/Login/lock-password-line.png" alt="">
                     </div>
 
                     <div class="input-field button">
-                        <button type="submit" onclick="loginAtivo()" id="loginBtn" title="Login">
+                        <button type="submit" value="Enviar" id="loginBtn" name="submit" title="Login">
                             <span class="btnLogin">Login</span>
                         </button>
                     </div>
                     <div class="input-field button">
-                        <button  type="button" id="LimparCamposLogin" style="background:#aaa" >
+                        <button  type="button" id="LimparCamposLogin" 
+                        style="background:#aaa">
                         <span class="btnText">Limpar</span>
                         </button>
                     </div>
@@ -53,10 +56,14 @@
                         <a href="registroView.php" class="text signup-link">Cadastre-se agora</a>
                     </span>
                 </div>
+                
             </div>
         </div>
     </div>
     <div id="message-container" class="message-container"></div>
-    <script src="./../assets/js/validacao-login.js"></script>
+
+    <script src="../assets/js/validacao-login.js"></script>
+    
+    
 </body>
 </html>
