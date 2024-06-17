@@ -85,7 +85,7 @@
         
       </div>";
       
-      }else{
+      }elseif($_SESSION['loginLogin'] == "MASTER"){
         echo "<div id='sectionAtiva' style='display:flex;margin-right:40px'>
         <ul class='navbar-nav me-auto mb-2 mb-lg-0'>
           <li class='nav-item dropdown'>
@@ -116,8 +116,41 @@
                 <hr class='dropdown-divider'>
               </li>
               <li style='display: flex; justify-content: center;'>
-                <form action='../Controllers/crud/sairUsuario.php' id='formSair' method='post'><button class='btn btn-danger' type='submit' name='sair' id='sair'>Sair</button></form>
+                <form action='../Controllers/crud/sairUsuario.php' id='formSair' method='post'><button class='btn btn-danger' type='submit' name='sair' id='sair'>Sair</button></form>    
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>";
+      }else{
+        echo "<div id='sectionAtiva' style='display:flex;margin-right:40px'>
+        <ul class='navbar-nav me-auto mb-2 mb-lg-0'>
+          <li class='nav-item dropdown'>
+            <a class='nav-link dropdown-toggle' href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false'>
+              <i class='bi bi-person-circle'>";
+              echo " ";
+              echo $_SESSION['loginLogin']??'Sem cadastro';
+              echo "</i>
+            </a>
+            <ul class='dropdown-menu'>
+              <br>
+              <li style='display: flex; justify-content: center;'><i class='bi bi-person-circle d-flex'></i>
+              </li>
+              <br>
+              <li style='display: flex; justify-content: center;'>
+                ";
                 
+              echo 'Olá, '; 
+              echo $_SESSION['loginLogin']??'Sem cadastro';
+              echo "
+              </li>
+              <li><a class='dropdown-item' href='../Controllers/crud/update.php'><i class='bi bi-gear-fill'> Editar usuário</i></a></li>
+              </li>
+              <li>
+                <hr class='dropdown-divider'>
+              </li>
+              <li style='display: flex; justify-content: center;'>
+                <form action='../Controllers/crud/sairUsuario.php' id='formSair' method='post'><button class='btn btn-danger' type='submit' name='sair' id='sair'>Sair</button></form>  
               </li>
             </ul>
           </li>

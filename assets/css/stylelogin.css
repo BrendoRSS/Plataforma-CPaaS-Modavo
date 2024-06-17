@@ -16,6 +16,14 @@ body{
     background-color: #1F81C1;
 }
 
+.body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1F81C1;
+}
+
 /* Estilização Formulário e Logo */
 .container{
     position: relative;
@@ -256,6 +264,9 @@ body{
     height: 5px;
     background: red;
     animation: anim 3s linear forwards;
+}
+.input{
+    margin: 5px;
 }
 
 @keyframes anim {

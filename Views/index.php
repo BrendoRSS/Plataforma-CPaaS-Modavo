@@ -19,7 +19,7 @@
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="./../assets/vendor/aos/aos.css" rel="stylesheet">
+  
   <link href="./../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="./../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="./../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
@@ -52,12 +52,12 @@
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center modavo-logo">
           <img src="./../assets/img/logo-modavo-cpaas.png" alt="" width="300">
-          <h2 data-aos="fade-up" data-aos-delay="400">
+          <h2 >
             Descubra a solução de CPaaS da Modavo. Uma solução completa para integrar canais de comunicação
             empresarial, como SMS, autenticação de dois fatores, números máscara, transcrição de áudio e
             muito mais. Experimente agora!
           </h2>
-          <div data-aos="fade-up" data-aos-delay="600">
+          <div>
             <div class="text-center text-lg-start">
               <a href="preços.html"
                 class="btn-teste-gratis scrollto d-inline-flex align-items-center justify-content-center align-self-center">

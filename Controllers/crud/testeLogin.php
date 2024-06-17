@@ -17,10 +17,12 @@ if (isset($_POST['submit']) && !empty($_POST['loginLogin']) && !empty($_POST['se
     $result = $connection->query($sql);
     //print_r($sql);
     //print_r($result);
+    $id = $row['idUsuário'];
 
     if (mysqli_num_rows($result) < 1) {
         unset($_SESSION['loginLogin']);
         unset($_SESSION['senhaLogin']);
+        unset($_SESSION['id']);
         header('Location: ../../Views/loginView.php');      
 
         
@@ -29,7 +31,12 @@ if (isset($_POST['submit']) && !empty($_POST['loginLogin']) && !empty($_POST['se
         //criar sessão:
         $_SESSION['loginLogin'] = $login;
         $_SESSION['senhaLogin'] = $senha;
-        header('Location: ../../Views/Autenticação2FAview.php');
+        $_SESSION['id'] = $id;
+        if($login == "MASTER"){header('Location: ../../Views/index.php');}
+        else{
+            header('Location: ../../Views/Autenticação2FAview.php');
+        }
+        
     };
 } else {
     header('Location: ../../Views/loginView.php');
