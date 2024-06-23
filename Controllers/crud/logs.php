@@ -82,7 +82,7 @@
             </div>
             </div>
             <div class="col-6-md-12 mt-5" style="display:flex; justify-content:center;">
-                <a href="consulta.php" class="btn btn-danger">Voltar</a>
+                <a href="javascript:history.back()" class="btn btn-danger">Voltar</a>
             </div>
 
         </div>
