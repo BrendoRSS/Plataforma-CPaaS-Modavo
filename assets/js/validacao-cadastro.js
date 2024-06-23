@@ -52,6 +52,7 @@ function validateForm() {
         return;
     }
 
+
     // Verifica os formatos dos números de telefone celular
     const numberMobileRegex = /^(\d{2})\s(\d{5})[-.\s]?(\d{4})$/;
     if (!numberMobileRegex.test(numberMobile) || !numberMobileRegex.test(numberMobile)) {

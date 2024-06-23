@@ -56,11 +56,11 @@
                             <?php
                             session_start();
                             $remover = isset($_POST['remover']);
-                            $filtro = "";
+                            $filtro = ' idUsuário > 1 ';
                             // Aqui estou incluindo o arquivo de configuração
                             require_once "config.php";
                             if (isset($_POST['remover'])) {
-                                $filtro = "idUsuário > 1";
+                                $filtro = ' idUsuário > 1 ';
                                 unset($remover);
                             } else {
                                 if(isset($_GET['nome']) and isset($_GET['cep'])){
@@ -77,13 +77,11 @@
                                     $filtro = "idUsuário > 1";
                                 };
 
-                                }else{
-                                    header("location: consulta.php");
                                 }
                             };
                             echo '<br>';
                             // Montando o comando select para exibir a lista de usuários
-                            $sql = "SELECT * FROM usuários where $filtro order by Nome";
+                            $sql = "SELECT * FROM usuários where $filtro ";
                             if ($result = mysqli_query($connection, $sql)) {
                                 if (mysqli_num_rows($result) > 0) {
                                     echo '<table border="1" class="table" style="font-size:12px"> ';
@@ -159,7 +157,7 @@
                     <div class="col-6-md-12 mt-5" style="display:flex; justify-content:center;">
                         <a href="../../Views/index.php" class="btn btn-danger">Voltar</a>
                     </div>
-
+                    
                 </div>
             </div>
         </div>
