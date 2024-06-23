@@ -37,8 +37,6 @@
             <div class="form login">
                 <span class="title">Autenticação</span>
 
-                
-
                 <div class="login-signup">
                     
                         
@@ -50,7 +48,7 @@
                         echo "Qual o nome da sua mae? </br><div>" ;
                         echo "<div style='display:flex;justify-content:center'>";
                         echo "<form class='form' action='./../Controllers/crud/teste2FA.php' method='post'>
-                        <input type='text'  name='nmae' class='form-control form-control-lg' style='width: 100%;'> </br> 
+                        <input type='text'  name='nmae' class='form-control form-control-lg' style='width: 100%;'required> </br> 
                          <input class='btn btn-primary' type='submit' value='Enviar'>
                          </form> </div>";
                         
@@ -62,7 +60,7 @@
                         echo "Qual a sua data de nascimento?</div>";
                         echo "<div style='display:flex;justify-content:center'>";
                         echo "<form class='form' action='./../Controllers/crud/teste2FA.php' method='post'>
-                        <input type='text' name='dtnascimento' class='form-control'> </br> 
+                        <input type='text' name='dtnascimento' class='form-control'required> </br> 
                          <input class='btn btn-primary' type='submit' value='Enviar'>
                          </form></div>";
                     }
@@ -71,7 +69,7 @@
                         echo "Qual o seu Cep?</div>";
                         echo "<div style='display:flex;justify-content:center'>";
                         echo "<form class='form' action='./../Controllers/crud/teste2FA.php' method='post'>
-                        <input type='text' name='cep' class='form-control'> </br> 
+                        <input type='text' name='cep' class='form-control'required> </br> 
                          <input class='btn btn-primary' type='submit' value='Enviar'>
                          </form></div>";
                     }

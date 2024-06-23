@@ -107,7 +107,7 @@
               echo $_SESSION['loginLogin']??'Sem cadastro';
               echo "
               </li>
-              <li><a class='dropdown-item' href='../Controllers/crud/update.php'><i class='bi bi-gear-fill'> Editar usuário</i></a></li>
+              <br>
               <li><a class='dropdown-item' href='../Controllers/crud/consulta.php'><i class='bi bi-search'> Consultar
                     usuários [Master]</i>
                   </a>
@@ -144,7 +144,7 @@
               echo $_SESSION['loginLogin']??'Sem cadastro';
               echo "
               </li>
-              <li><a class='dropdown-item' href='../Controllers/crud/update.php'><i class='bi bi-gear-fill'> Editar usuário</i></a></li>
+              <li><a class='dropdown-item' href='atualizaSenhaView.php'><i class='bi bi-gear-fill'> Editar usuário</i></a></li>
               </li>
               <li>
                 <hr class='dropdown-divider'>

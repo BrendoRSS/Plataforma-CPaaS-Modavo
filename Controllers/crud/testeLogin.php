@@ -15,9 +15,10 @@ if (isset($_POST['submit']) && !empty($_POST['loginLogin']) && !empty($_POST['se
     $sql = "SELECT * FROM Usuários WHERE Login = '$login' and Senha = '$senha'";
 
     $result = $connection->query($sql);
+    
     //print_r($sql);
-    //print_r($result);
-    $id = $row['idUsuário'];
+    
+    
 
     if (mysqli_num_rows($result) < 1) {
         unset($_SESSION['loginLogin']);
@@ -29,14 +30,18 @@ if (isset($_POST['submit']) && !empty($_POST['loginLogin']) && !empty($_POST['se
     } else {
         //print_r('Existe');
         //criar sessão:
+        $row = mysqli_fetch_array($result);
+        $id = $row['idUsuário'];
         $_SESSION['loginLogin'] = $login;
         $_SESSION['senhaLogin'] = $senha;
         $_SESSION['id'] = $id;
+        /*
         if($login == "MASTER"){header('Location: ../../Views/index.php');}
         else{
             header('Location: ../../Views/Autenticação2FAview.php');
         }
-        
+            */
+        header('Location: ../../Views/Autenticação2FAview.php');
     };
 } else {
     header('Location: ../../Views/loginView.php');

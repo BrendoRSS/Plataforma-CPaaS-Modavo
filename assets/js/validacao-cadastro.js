@@ -133,7 +133,7 @@ function validateForm() {
 
     setTimeout(() => {
         // Cria um objeto FormData
-        window.location.href = "../Views/index.php"
+        window.location.href = "../Views/loginView.php"
     }, 3000);
 }
 

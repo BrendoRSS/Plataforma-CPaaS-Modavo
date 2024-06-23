@@ -1,23 +1,26 @@
-
 <?php
 session_start();
 // Aqui estou incluindo o arquivo de configuração
 require_once "config.php";
-    print_r($_SESSION);
     /*$_SESSION['loginLogin'] = $login;
     $_SESSION['senhaLogin'] = $senha;*/
-    
-    /*// preparando o statement do comando update
-    $sql = "UPDATE Usuarios SET usu_nome=?, usu_login=?, usu_senha=? WHERE usu_codigo=?";
+    $novaSenha = $_POST['novaSenha'];
+    $id = $_SESSION['id'];
+    print_r($novaSenha);
+
+    if(empty($novaSenha)){
+        header('Location: atualizaSenhaView.php?erro=1');
+    }elseif(preg_match('/\d/', $novaSenha)) {
+        echo "O campo de texto contém números.";
+        header('Location: atualizaSenhaView.php?erro=1');
+    } else {
+    //preparando o statement do comando update
+    $sql = "UPDATE usuários SET Senha = ? WHERE idUsuário = ?";
+    print_r($sql);
          
     if($stmt = mysqli_prepare($connection, $sql)){
 		// liga as variáveis do "prepared statement" aos parâmetros que foram passados
-        mysqli_stmt_bind_param($stmt, "sssi", $param_nome, $param_login, $param_senha, $id);
-        
-        // Inicializa os parâmetros
-        $param_nome = $nome;
-        $param_login = $login;
-        $param_senha = $senha;
+        mysqli_stmt_bind_param($stmt, "si", $novaSenha, $id);
         
         // Execute a query já com os "prepared statement" ajustados
         if(mysqli_stmt_execute($stmt)){
@@ -32,7 +35,7 @@ require_once "config.php";
             mysqli_close($connection);
             
             // Se o usuário foi atualizado com sucesso, então redireciono para a página de consulta.
-            header("location: consulta.php");
+            header("location: ../../Views/index.php");
             exit();
 
         } else{
@@ -40,5 +43,10 @@ require_once "config.php";
             exit();
         }
     }
+
+    }
+    
+    
+    
         
-    */
+    ?>

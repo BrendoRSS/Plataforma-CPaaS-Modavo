@@ -127,7 +127,7 @@
                 <div class="row">
                     <div class="col-12-md-12" style="display:flex; justify-content:right;">
                         
-                        <button type="submit" class="btn btn-primary"style="margin-right:5px;" onclick="validateForm()">
+                        <button type="submit" class="btn btn-primary"style="margin-right:5px;" >
                             <span class="btnText">Cadastrar</span>
                         </button>
                         <button class="btn-limpar"  type="button" onclick="LimparCampos()"><span class="btnText" >Limpar</span></button>

@@ -17,7 +17,7 @@
     <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="../../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
     <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="../../assets/css/styleconsulta.css">
     <!-- Template Main CSS File -->
     <title>Consulta</title>
 </head>
@@ -34,7 +34,9 @@
             </div>
             <div class="container">
             <div class="col-6-md-12" style="display:flex; justify-content:center; width:auto">
+                <div class="table-container">
                 <?php
+                session_start();
                 // Aqui estou incluindo o arquivo de configuração
                 require_once "config.php";
                 // Montando o comando select para exibir a lista de usuários
@@ -44,27 +46,39 @@
                         echo '<table border="1" class="table" style="font-size:12px"> ';
                         echo "<tr>";
                         echo "<th>#</th>";
-                        echo "<th>Nome</th>";
+                        echo "<th>Status</th>";
+                        echo "<th>Ações</th>";
+                        echo "<th style='padding-right:180px'>Nome</th>";
                         echo "<th>Data Nascimento</th>";
                         echo "<th>CPF</th>";
                         echo "<th>Gênero</th>";
-                        echo "<th>Nome da Mãe</th>";
-                        echo "<th>Telefone Celular</th>";
-                        echo "<th>Telefone Fixo</th>";
+                        echo "<th style='padding-right:180px'>Nome Mãe</th>";
+                        echo "<th style='padding-right:50px'>Telefone Celular</th>";
+                        echo "<th style='padding-right:50px'>Telefone Fixo</th>";
                         echo "<th>Cep</th>";
-                        echo "<th>Logradouro</th>";
-                        echo "<th>Bairro</th>";
-                        echo "<th>Cidade</th>";
+                        echo "<th style='padding-right:180px'>Logradouro</th>";
+                        echo "<th style='padding-right:90px'>Bairro</th>";
+                        echo "<th style='padding-right:90px'>Cidade</th>";
                         echo "<th>Estado</th>";
                         echo "<th>Nº</th>";
                         echo "<th>Complemento</th>";
                         echo "<th>Login</th>";
                         echo "<th>Senha</th>";
-                        echo "<th>Ações</th>";
                         echo "</tr>";
                         while ($row = mysqli_fetch_array($result)) {
                             echo "<tr>";
                             echo "<td>" . $row['idUsuário'] . "</td>";
+                            echo "<td>" . $row['statusDeUsuario'] . "</td>";
+                            echo "<td>";
+                            echo '<a title="Ver Usuário" style="height:30px; width:40px; font-size:12px" class="btn btn-success" href="read.php?idUsuário=' . $row['idUsuário'] . '"><i class="bi bi-eye-fill"></i></a>';
+                            if ($row['idUsuário'] != "27"){
+                                if($row['$statusDeUsuario'] = "Ativo"){
+                                    echo '<a title="Alterar Status de Usuário"style="margin-top:5px; height:30px; font-size:12px;width:40px" class="btn btn-info" href="delete.php?idUsuário=' . $row['idUsuário'] . '"><i class="bi bi-person-fill-check"></i></a>';
+                                }
+                                
+                            };
+                            echo '<a title="Ver Logs" style=" margin-top:5px;height:30px; width:40px; font-size:12px" class="btn btn-secondary" href="logs.php?idUsuário=' . $row['idUsuário'] . '"><i class="bi bi-activity"></i></i></a>';
+                            echo "</td>";
                             echo "<td>" . $row['Nome'] . "</td>";
                             echo "<td>" . $row['dataNascimento'] . "</td>";
                             echo "<td>" . $row['CPF'] . "</td>";
@@ -81,12 +95,7 @@
                             echo "<td>" . $row['Complemento'] . "</td>";
                             echo "<td>" . $row['Login'] . "</td>";
                             echo "<td>" . $row['Senha'] . "</td>";
-                            echo "<td>";
-                            echo '<a href="read.php?idUsuário=' . $row['idUsuário'] . '">visualizar  </a>';
-                            if ($row['idUsuário'] != "27"){
-                                echo '|  <a href="delete.php?idUsuário=' . $row['idUsuário'] . '">excluir</a>';
-                            };
-                            echo "</td>";
+                            
                             echo "</tr>";
                         }
                         echo "</table>";
@@ -103,7 +112,7 @@
                 mysqli_close($connection);
                 ?>
                 <br>
-
+            </div>
             </div>
             <div class="col-6-md-12 mt-5" style="display:flex; justify-content:center;">
                 <a href="../../Views/index.php" class="btn btn-danger">Voltar</a>
@@ -114,7 +123,7 @@
     </div>
     </div>
     <!-- Vendor JS Files -->
-  <script src="./assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="./../assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="./../assets/vendor/aos/aos.js"></script>
   <script src="./../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="./../assets/vendor/glightbox/js/glightbox.min.js"></script>

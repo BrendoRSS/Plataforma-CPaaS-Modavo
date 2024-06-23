@@ -30,6 +30,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`usuários` (
   `Login` VARCHAR(45) NULL DEFAULT NULL,
   `Senha` VARCHAR(8) NULL DEFAULT NULL,
   `TipoUsuário` VARCHAR(2) NULL DEFAULT NULL,
+  `statusDeUsuario` VARCHAR(20) NULL DEFAULT NULL,
   PRIMARY KEY (`idUsuário`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
@@ -53,3 +54,4 @@ DEFAULT CHARACTER SET = utf8;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+insert mydb.usuários values(null,"MASTER","2000-11-09","14670545779","Masculino","Luciana","1234","1234","21725360","rua","bairro","cidade","estado","230","complemento","Master","1234","2");
